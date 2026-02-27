@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viralizame — Seguidores Latinos Reales · Instagram · TikTok · YouTube · Facebook</title>
+<meta name="description" content="Seguidores latinos reales para Instagram, TikTok, YouTube, Facebook y Twitter/X. 100% seguro, sin contraseña. Resultados garantizados.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07070f;--bg2:#0c0c1a;--card:#111122;--card2:#161630;
+  --pink:#e91e8c;--purple:#7c3aed;--gold:#f5c518;--green:#00d68f;
+  --text:#fff;--muted:#7878a0;
+  --grad:linear-gradient(135deg,#e91e8c,#7c3aed);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--pink)}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(7,7,15,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.04);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold);letter-spacing:3px;text-decoration:none}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;transition:.2s}
+.nav-links a:hover{color:#fff}
+.btn-wa{background:#25d366;color:#000;font-weight:800;padding:9px 18px;border-radius:50px;text-decoration:none;font-size:13px;display:flex;align-items:center;gap:6px;transition:.2s;white-space:nowrap}
+.btn-wa:hover{transform:scale(1.05);box-shadow:0 0 20px rgba(37,211,102,.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px;position:relative;overflow:hidden}
+.hg1{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 15%,rgba(124,58,237,.2),transparent 65%);pointer-events:none}
+.hg2{position:absolute;bottom:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(233,30,140,.08),transparent 70%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,30,140,.08);border:1px solid rgba(233,30,140,.25);color:var(--pink);padding:8px 22px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:3px;margin-bottom:28px;text-transform:uppercase}
+.pdot{width:7px;height:7px;background:var(--pink);border-radius:50%;animation:pd 1.4s ease-in-out infinite;flex-shrink:0}
+@keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.6)}}
+.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,13vw,168px);line-height:.88;letter-spacing:-2px;margin-bottom:10px}
+.htitle span{display:block;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.countries{font-size:12px;letter-spacing:4px;color:var(--muted);font-weight:700;margin-bottom:16px;text-transform:uppercase}
+.hsub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.65);max-width:600px;margin:0 auto 36px;line-height:1.65}
+.hbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-p{background:var(--grad);color:#fff;font-weight:800;padding:15px 32px;border-radius:50px;text-decoration:none;font-size:15px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.3s;font-family:'Outfit',sans-serif}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(233,30,140,.4)}
+.btn-s{background:rgba(255,255,255,.06);color:#fff;font-weight:600;padding:15px 28px;border-radius:50px;text-decoration:none;font-size:15px;border:1px solid rgba(255,255,255,.1);transition:.3s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-family:'Outfit',sans-serif}
+.btn-s:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+
+.ticker-wrap{overflow:hidden;background:rgba(233,30,140,.05);border-top:1px solid rgba(233,30,140,.1);border-bottom:1px solid rgba(233,30,140,.1);padding:11px 0;white-space:nowrap}
+.ticker-inner{display:inline-flex;gap:36px;animation:tick 32s linear infinite}
+.ticker-inner span{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--pink);text-transform:uppercase}
+.ticker-inner .td{color:rgba(255,255,255,.18)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.stats-s{padding:48px 0;background:linear-gradient(180deg,rgba(124,58,237,.07),transparent)}
+.sg{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0 40px}
+.si{text-align:center}
+.sn{font-family:'Bebas Neue',sans-serif;font-size:52px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.sl{font-size:10px;color:var(--muted);letter-spacing:2.5px;font-weight:700;text-transform:uppercase;margin-top:4px}
+
+.trial-w{max-width:1100px;margin:0 auto;padding:0 40px 40px}
+.trial-i{background:linear-gradient(90deg,rgba(245,197,24,.07),rgba(233,30,140,.05));border:1px solid rgba(245,197,24,.18);border-radius:14px;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:500;flex-wrap:wrap;text-align:center}
+.trial-i strong{color:var(--gold)}.trial-i a{color:var(--pink);font-weight:700;text-decoration:none}
+
+section{padding:72px 40px}
+.container{max-width:1100px;margin:0 auto}
+.slabel{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--pink);margin-bottom:10px;text-transform:uppercase}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,6vw,68px);line-height:1;margin-bottom:16px}
+.ssub{color:var(--muted);font-size:16px;max-width:580px;line-height:1.6}
+
+.ptabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 34px}
+.ptab{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:var(--muted);padding:9px 18px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;transition:.2s}
+.ptab.active,.ptab:hover{background:var(--grad);color:#fff;border-color:transparent}
+
+.cath{display:flex;align-items:center;gap:12px;margin:38px 0 16px}
+.ci{width:34px;height:34px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ct{font-size:15px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.cd{color:var(--muted);font-size:12px;margin-top:2px}
+
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:13px}
+.pc{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:22px;position:relative;transition:.3s;cursor:pointer}
+.pc:hover{border-color:rgba(233,30,140,.35);transform:translateY(-4px);box-shadow:0 16px 48px rgba(233,30,140,.1)}
+.pc.feat{border-color:rgba(124,58,237,.4);background:linear-gradient(135deg,rgba(124,58,237,.09),rgba(233,30,140,.05))}
+.pb{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;font-size:10px;font-weight:800;padding:3px 12px;border-radius:50px;letter-spacing:1px;white-space:nowrap}
+.pq{font-family:'Bebas Neue',sans-serif;font-size:48px;line-height:1}
+.pt{font-size:10px;color:var(--muted);letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:9px}
+.pbo{background:rgba(0,214,143,.07);border:1px solid rgba(0,214,143,.13);border-radius:8px;padding:7px 11px;font-size:11px;color:#00d68f;font-weight:600;margin-bottom:13px;line-height:1.4}
+.pp{font-size:30px;font-weight:800;color:var(--pink);margin-bottom:14px}
+.bbuy{width:100%;background:var(--grad);border:none;color:#fff;font-weight:700;padding:11px;border-radius:10px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s}
+.bbuy:hover{opacity:.88}
+.bbuyo{width:100%;background:transparent;border:1px solid rgba(255,255,255,.12);color:#fff;font-weight:600;padding:11px;border-radius:10px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s}
+.bbuyo:hover{background:rgba(255,255,255,.05)}
+
+.ubanner{background:linear-gradient(135deg,#120828,#220d4e);border:1px solid rgba(124,58,237,.3);border-radius:20px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin:32px 0;flex-wrap:wrap}
+.ubt{background:var(--gold);color:#000;font-weight:800;font-size:10px;letter-spacing:2px;padding:3px 10px;border-radius:4px;margin-bottom:7px;display:inline-block;text-transform:uppercase}
+.ubanner h3{font-family:'Bebas Neue',sans-serif;font-size:28px}
+.ubanner p{color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="logo">VIRALIZAME</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#promox2">Promo X2</a></li>
+    <li><a href="#planes">Planes</a></li>
+    <li><a href="#referidos">Referidos</a></li>
+    <li><a href="#ia">Asistente IA</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/18325163196" target="_blank" class="btn-wa">💬 WhatsApp</a>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <div class="hg1"></div><div class="hg2"></div>
+  <div style="position:relative;z-index:1">
+    <div class="badge"><span class="pdot"></span>CRECIMIENTO LATINO REAL · RESULTADOS GARANTIZADOS</div>
+    <h1 class="htitle">HAZTE<span>VIRAL</span></h1>
+    <p class="countries">🇺🇸 USA · MX · CO · AR · BR · CL · PE · VE · EC · DO · PR · UY · BO · PA</p>
+    <p class="hsub">Seguidores latinos reales, likes, views y más para Instagram, TikTok, YouTube, Facebook y Twitter/X. Sin contraseña. 100% seguro y garantizado.</p>
+    <div class="hbtns">
+      <a href="#servicios" class="btn-p">Ver Todos los Servicios 🚀</a>
+      <a href="#ia" class="btn-s">Hablar con IA 🤖</a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-wrap"><div class="ticker-inner">
+<span>SEGUIDORES LATINOS</span><span class="td">✦</span><span>AUTOLIKES</span><span class="td">✦</span><span>AUTOVIEWS</span><span class="td">✦</span><span>TIKTOK</span><span class="td">✦</span><span>YOUTUBE</span><span class="td">✦</span><span>FACEBOOK</span><span class="td">✦</span><span>TWITTER/X</span><span class="td">✦</span><span>ENGAGEMENT BOOST</span><span class="td">✦</span><span>COMENTARIOS LATINOS</span><span class="td">✦</span><span>PLANES MENSUALES</span><span class="td">✦</span><span>PROMO X2</span><span class="td">✦</span><span>WATCHTIME</span><span class="td">✦</span>
+<span>SEGUIDORES LATINOS</span><span class="td">✦</span><span>AUTOLIKES</span><span class="td">✦</span><span>AUTOVIEWS</span><span class="td">✦</span><span>TIKTOK</span><span class="td">✦</span><span>YOUTUBE</span><span class="td">✦</span><span>FACEBOOK</span><span class="td">✦</span><span>TWITTER/X</span><span class="td">✦</span><span>ENGAGEMENT BOOST</span><span class="td">✦</span><span>COMENTARIOS LATINOS</span><span class="td">✦</span><span>PLANES MENSUALES</span><span class="td">✦</span><span>PROMO X2</span><span class="td">✦</span><span>WATCHTIME</span><span class="td">✦</span>
+</div></div>
+
+<div class="stats-s"><div class="sg">
+  <div class="si"><div class="sn">2.8M+</div><div class="sl">Seguidores Entregados</div></div>
+  <div class="si"><div class="sn">50K+</div><div class="sl">Creadores Satisfechos</div></div>
+  <div class="si"><div class="sn">5</div><div class="sl">Redes Sociales</div></div>
+  <div class="si"><div class="sn">100%</div><div class="sl">Seguro y Garantizado</div></div>
+</div></div>
+
+<div class="trial-w"><div class="trial-i">
+  🎁 <strong>PRUEBA GRATIS:</strong> Solicita 50 seguidores latinos gratis antes de comprar — <a href="https://wa.me/18325163196" target="_blank">contáctanos por WhatsApp →</a>
+</div></div>
+
+<section id="servicios">
+<div class="container">
+  <div class="slabel">Catálogo Completo</div>
+  <h2 class="stitle">TODOS NUESTROS SERVICIOS</h2>
+  <p class="ssub">Seguidores latinos y universales, likes, views, comentarios y más. Elige tu plataforma.</p>
+  <div class="ptabs">
+    <button class="ptab active" onclick="showP('ig',this)">📸 Instagram</button>
+    <button class="ptab" onclick="showP('tt',this)">🎵 TikTok</button>
+    <button class="ptab" onclick="showP('yt',this)">▶️ YouTube</button>
+    <button class="ptab" onclick="showP('fb',this)">👍 Facebook</button>
+    <button class="ptab" onclick="showP('tw',this)">🐦 Twitter/X</button>
+    <button class="ptab" onclick="showP('au',this)">⚡ Autolikes/Views</button>
+    <button class="ptab" onclick="showP('en',this)">📊 Engagement</button>
+  </div>
+
+  <!-- IG -->
+  <div id="p-ig">
+    <div class="cath"><div class="ci">👥</div><div><div class="ct">Seguidores Latinos Instagram — Paquetes</div><div class="cd">≈60% perfiles latinos reales · Incluye Likes + Views · Entrega progresiva</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('500 Seg. Latinos Instagram','$24.99','500 Seguidores Latinos + 1,000 Likes + 2,000 Views')"><div class="pq">500</div><div class="pt">Seguidores Latinos</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$24.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('1,000 Seg. Latinos Instagram','$34.99','1,000 Seguidores Latinos + 1,000 Likes + 2,000 Views')"><div class="pb">⭐ POPULAR</div><div class="pq">1,000</div><div class="pt">Seguidores Latinos</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$34.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('2,000 Seg. Latinos Instagram','$49.99','2,000 Seguidores Latinos + 1,000 Likes + 2,000 Views')"><div class="pq">2,000</div><div class="pt">Seguidores Latinos</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$49.99</div><button class="bbuy">Comprar Ahora</button></div>
+    </div>
+    <div class="cath"><div class="ci">🔥</div><div><div class="ct">Seguidores Latinos — Promociones</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('4,000 Seg. Latinos Instagram','$84.99','4,000 Seguidores Latinos + 1,000 Likes + 2,000 Views')"><div class="pq">4,000</div><div class="pt">Seg. Latinos</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$84.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('6,000 Seg. Latinos Instagram','$119.99','6,000 Seguidores Latinos + 1,000 Likes + 2,000 Views')"><div class="pb">⭐ POPULAR</div><div class="pq">6,000</div><div class="pt">Seg. Latinos</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$119.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('10,000 Seg. Latinos Instagram','$184.99','10,000 Seguidores Latinos + 1,000 Likes + 2,000 Views')"><div class="pq">10,000</div><div class="pt">Seg. Latinos</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$184.99</div><button class="bbuy">Comprar Ahora</button></div>
+    </div>
+    <div class="ubanner"><div><div class="ubt">💎 UPGRADE RECOMENDADO</div><h3>¿QUIERES EL DOBLE DE IMPACTO?</h3><p>Añade Autolikes y cada post explota en alcance automáticamente</p></div><button class="btn-p" onclick="openModal('Autolikes 3,000 Likes','$24.99','3,000 Autolikes automáticos distribuidos en tus posts')">+ Añadir Autolikes $24.99</button></div>
+
+    <div class="cath"><div class="ci">🌐</div><div><div class="ct">Seguidores Universales Instagram — Paquetes</div><div class="cd">Audiencia global · Garantía 1 año · Estables y económicos</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('1,000 Seg. Universales Instagram','$29.99','1,000 Seguidores Universales + 1,000 Likes + 3,000 Views')"><div class="pq">1,000</div><div class="pt">Universales</div><div class="pbo">🎁 1,000 Likes + 3,000 Views</div><div class="pp">$29.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('2,000 Seg. Universales Instagram','$39.99','2,000 Seguidores Universales + 1,000 Likes + 3,000 Views')"><div class="pb">⭐ POPULAR</div><div class="pq">2,000</div><div class="pt">Universales</div><div class="pbo">🎁 1,000 Likes + 3,000 Views</div><div class="pp">$39.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('6,000 Seg. Universales Instagram','$94.99','6,000 Seguidores Universales + 2,000 Likes + 6,000 Views')"><div class="pq">6,000</div><div class="pt">Universales</div><div class="pbo">🎁 2,000 Likes + 6,000 Views</div><div class="pp">$94.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('10,000 Seg. Universales Instagram','$149.99','10,000 Seguidores Universales + 2,000 Likes + 6,000 Views')"><div class="pq">10,000</div><div class="pt">Universales</div><div class="pbo">🎁 2,000 Likes + 6,000 Views</div><div class="pp">$149.99</div><button class="bbuy">Comprar Ahora</button></div>
+    </div>
+    <div class="cath"><div class="ci">🚀</div><div><div class="ct">Mega Promo Universales</div><div class="cd">Incluye 10,000 Likes + 50,000 Views distribuibles</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('25,000 Seg. Universales Instagram','$239.99','25,000 Seguidores Universales + 10,000 Likes + 50,000 Views')"><div class="pq">25K</div><div class="pt">Universales</div><div class="pbo">🎁 10,000 Likes + 50,000 Views</div><div class="pp">$239.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('50,000 Seg. Universales Instagram','$419.99','50,000 Seguidores Universales + 10,000 Likes + 50,000 Views')"><div class="pb">🏆 TOP</div><div class="pq">50K</div><div class="pt">Universales</div><div class="pbo">🎁 10,000 Likes + 50,000 Views</div><div class="pp">$419.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('100,000 Seg. Universales Instagram','$659.99','100,000 Seguidores Universales + 10,000 Likes + 50,000 Views')"><div class="pq">100K</div><div class="pt">Universales</div><div class="pbo">🎁 10,000 Likes + 50,000 Views</div><div class="pp">$659.99</div><button class="bbuy">Comprar Ahora</button></div>
+    </div>
+    <div class="cath"><div class="ci">❤️</div><div><div class="ct">Seguidores Latinos 100% Reales</div><div class="cd">Crecimiento natural y progresivo · Ideal empresas e influencers · Mayor calidad</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('500 Seg. Latinos 100% Reales','$39.99','500 Seguidores Latinos 100% Reales + 2,000 Likes Latinos + 20,000 Views')"><div class="pq">500</div><div class="pt">100% Reales</div><div class="pbo">🎁 2,000 Likes + 20,000 Views</div><div class="pp">$39.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('1,000 Seg. Latinos 100% Reales','$69.99','1,000 Seguidores Latinos 100% Reales + 2,000 Likes Latinos + 20,000 Views')"><div class="pb">⭐ POPULAR</div><div class="pq">1,000</div><div class="pt">100% Reales</div><div class="pbo">🎁 2,000 Likes + 20,000 Views</div><div class="pp">$69.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('2,000 Seg. Latinos 100% Reales','$119.99','2,000 Seguidores Latinos 100% Reales + 2,000 Likes Latinos + 20,000 Views')"><div class="pq">2,000</div><div class="pt">100% Reales</div><div class="pbo">🎁 2,000 Likes + 20,000 Views</div><div class="pp">$119.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('4,000 Seg. Latinos 100% Reales','$189.99','4,000 Seguidores Latinos 100% Reales + 4,000 Likes Latinos + 40,000 Views')"><div class="pq">4,000</div><div class="pt">100% Reales</div><div class="pbo">🎁 4,000 Likes + 40,000 Views</div><div class="pp">$189.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('6,000 Seg. Latinos 100% Reales','$289.99','6,000 Seguidores Latinos 100% Reales + 4,000 Likes Latinos + 40,000 Views')"><div class="pb">⭐ POPULAR</div><div class="pq">6,000</div><div class="pt">100% Reales</div><div class="pbo">🎁 4,000 Likes + 40,000 Views</div><div class="pp">$289.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('10,000 Seg. Latinos 100% Reales','$399.99','10,000 Seguidores Latinos 100% Reales + 4,000 Likes Latinos + 40,000 Views')"><div class="pq">10,000</div><div class="pt">100% Reales</div><div class="pbo">🎁 4,000 Likes + 40,000 Views</div><div class="pp">$399.99</div><button class="bbuy">Comprar Ahora</button></div>
+    </div>
+  </div>
+
+  <!-- TIKTOK -->
+  <div id="p-tt" style="display:none">
+    <div class="cath"><div class="ci">🎵</div><div><div class="ct">Seguidores Universales TikTok</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('500 Seg. Universales TikTok','$24.99','500 Seguidores Universales para TikTok')"><div class="pq">500</div><div class="pt">Universales TikTok</div><div class="pp">$24.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('1,000 Seg. Universales TikTok','$34.99','1,000 Seguidores Universales para TikTok')"><div class="pb">⭐ POPULAR</div><div class="pq">1,000</div><div class="pt">Universales TikTok</div><div class="pp">$34.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('2,000 Seg. Universales TikTok','$49.99','2,000 Seguidores Universales para TikTok')"><div class="pq">2,000</div><div class="pt">Universales TikTok</div><div class="pp">$49.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('4,000 Seg. Universales TikTok','$84.99','4,000 Seguidores Universales para TikTok')"><div class="pq">4,000</div><div class="pt">Universales TikTok</div><div class="pp">$84.99</div><button class="bbuy">Comprar Ahora</button></div>
+    </div>
+    <div class="cath"><div class="ci">🌎</div><div><div class="ct">Seguidores Latinos TikTok</div><div class="cd">Paquetes incl. 1,000 Likes + 2,000 Views · Promociones incl. 2,000 Likes + 4,000 Views</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('500 Seg. Latinos TikTok','$29.99','500 Seguidores Latinos TikTok + 1,000 Likes + 2,000 Views')"><div class="pq">500</div><div class="pt">Latinos TikTok</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$29.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('1,000 Seg. Latinos TikTok','$39.99','1,000 Seguidores Latinos TikTok + 1,000 Likes + 2,000 Views')"><div class="pb">⭐ POPULAR</div><div class="pq">1,000</div><div class="pt">Latinos TikTok</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$39.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('2,000 Seg. Latinos TikTok','$54.99','2,000 Seguidores Latinos TikTok + 1,000 Likes + 2,000 Views')"><div class="pq">2,000</div><div class="pt">Latinos TikTok</div><div class="pbo">🎁 1,000 Likes + 2,000 Views</div><div class="pp">$54.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('4,000 Seg. Latinos TikTok','$89.99','4,000 Seguidores Latinos TikTok + 2,000 Likes + 4,000 Views')"><div class="pq">4,000</div><div class="pt">Latinos TikTok</div><div class="pbo">🎁 2,000 Likes + 4,000 Views</div><div class="pp">$89.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc feat" onclick="openModal('6,000 Seg. Latinos TikTok','$129.99','6,000 Seguidores Latinos TikTok + 2,000 Likes + 4,000 Views')"><div class="pb">⭐ POPULAR</div><div class="pq">6,000</div><div class="pt">Latinos TikTok</div><div class="pbo">🎁 2,000 Likes + 4,000 Views</div><div class="pp">$129.99</div><button class="bbuy">Comprar Ahora</button></div>
+      <div class="pc" onclick="openModal('10,000 Seg. Latinos TikTok','$189.99','10,000 Seguidores Latinos TikTok + 2,000 Likes + 4,000 Views')"><div class="pq">10,000</div><div class="pt">Latinos TikTok</div><div class="pbo">🎁 2,000 Likes + 4,000 Views</div><div class="pp">$189.99</div><button class="bbuy">Comprar Ahora</button></div>
+    </div>
+    <div class="cath"><div class="ci">❤️</div><div><div class="ct">Likes Latinos TikTok</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('3,000 Likes Latinos TikTok','$29.99','3,000 Likes Latinos TikTok')"><div class="pq">3,000</div><div class="pt">Likes Latinos</div><div class="pp">$29.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('6,000 Likes Latinos TikTok','$44.99','6,000 Likes Latinos TikTok')"><div class="pb">⭐ POPULAR</div><div class="pq">6,000</div><div class="pt">Likes Latinos</div><div class="pp">$44.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('10,000 Likes Latinos TikTok','$64.99','10,000 Likes Latinos TikTok')"><div class="pq">10,000</div><div class="pt">Likes Latinos</div><div class="pp">$64.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">▶️</div><div><div class="ct">Views TikTok</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('25,000 Views TikTok','$24.99','25,000 Views TikTok')"><div class="pq">25K</div><div class="pt">Views TikTok</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('50,000 Views TikTok','$34.99','50,000 Views TikTok')"><div class="pq">50K</div><div class="pt">Views TikTok</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('80,000 Views TikTok','$49.99','80,000 Views TikTok')"><div class="pb">⭐ POPULAR</div><div class="pq">80K</div><div class="pt">Views TikTok</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('120,000 Views TikTok','$84.99','120,000 Views TikTok')"><div class="pq">120K</div><div class="pt">Views TikTok</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">💬</div><div><div class="ct">Comentarios Latinos Personalizados TikTok</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('50 Comentarios Latinos TikTok','$24.99','50 Comentarios en Español para TikTok')"><div class="pq">50</div><div class="pt">Comentarios Latinos</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('100 Comentarios Latinos TikTok','$34.99','100 Comentarios en Español para TikTok')"><div class="pb">⭐ POPULAR</div><div class="pq">100</div><div class="pt">Comentarios Latinos</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('200 Comentarios Latinos TikTok','$49.99','200 Comentarios en Español para TikTok')"><div class="pq">200</div><div class="pt">Comentarios Latinos</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('350 Comentarios Latinos TikTok','$84.99','350 Comentarios en Español para TikTok')"><div class="pq">350</div><div class="pt">Comentarios Latinos</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+  </div>
+
+  <!-- YOUTUBE -->
+  <div id="p-yt" style="display:none">
+    <div class="cath"><div class="ci">👥</div><div><div class="ct">Suscriptores YouTube</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('1,000 Suscriptores YouTube','$79.99','1,000 Suscriptores para YouTube')"><div class="pq">1,000</div><div class="pt">Suscriptores</div><div class="pp">$79.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('2,000 Suscriptores YouTube','$139.99','2,000 Suscriptores para YouTube')"><div class="pb">⭐ POPULAR</div><div class="pq">2,000</div><div class="pt">Suscriptores</div><div class="pp">$139.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('3,000 Suscriptores YouTube','$219.99','3,000 Suscriptores para YouTube')"><div class="pq">3,000</div><div class="pt">Suscriptores</div><div class="pp">$219.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">❤️</div><div><div class="ct">Likes YouTube</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('3,000 Likes YouTube','$29.99','3,000 Likes para YouTube')"><div class="pq">3,000</div><div class="pt">Likes YT</div><div class="pp">$29.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('6,000 Likes YouTube','$39.99','6,000 Likes para YouTube')"><div class="pq">6,000</div><div class="pt">Likes YT</div><div class="pp">$39.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('10,000 Likes YouTube','$54.99','10,000 Likes para YouTube')"><div class="pb">⭐ POPULAR</div><div class="pq">10,000</div><div class="pt">Likes YT</div><div class="pp">$54.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('20,000 Likes YouTube','$99.99','20,000 Likes para YouTube')"><div class="pq">20,000</div><div class="pt">Likes YT</div><div class="pp">$99.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">▶️</div><div><div class="ct">Reproducciones YouTube</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('5,000 Views YouTube','$29.99','5,000 Reproducciones para YouTube')"><div class="pq">5,000</div><div class="pt">Reprod. YT</div><div class="pp">$29.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('10,000 Views YouTube','$44.99','10,000 Reproducciones para YouTube')"><div class="pb">⭐ POPULAR</div><div class="pq">10,000</div><div class="pt">Reprod. YT</div><div class="pp">$44.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('15,000 Views YouTube','$54.99','15,000 Reproducciones para YouTube')"><div class="pq">15,000</div><div class="pt">Reprod. YT</div><div class="pp">$54.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('20,000 Views YouTube','$79.99','20,000 Reproducciones para YouTube')"><div class="pq">20,000</div><div class="pt">Reprod. YT</div><div class="pp">$79.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">💬</div><div><div class="ct">Comentarios YouTube</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('100 Comentarios YouTube','$34.99','100 Comentarios para YouTube')"><div class="pq">100</div><div class="pt">Comentarios YT</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('200 Comentarios YouTube','$54.99','200 Comentarios para YouTube')"><div class="pb">⭐ POPULAR</div><div class="pq">200</div><div class="pt">Comentarios YT</div><div class="pp">$54.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('400 Comentarios YouTube','$84.99','400 Comentarios para YouTube')"><div class="pq">400</div><div class="pt">Comentarios YT</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">⏱️</div><div><div class="ct">Watchtime YouTube — Monetización</div></div></div>
+    <div class="cg">
+      <div class="pc feat" onclick="openModal('4,000 Horas Watchtime YouTube','$379.99','4,000 Horas de Watchtime para YouTube — Ideal para alcanzar monetización')"><div class="pb">🏆 MONETIZACIÓN</div><div class="pq">4,000</div><div class="pt">Horas Watchtime</div><div class="pp">$379.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+  </div>
+
+  <!-- FACEBOOK -->
+  <div id="p-fb" style="display:none">
+    <div class="cath"><div class="ci">👍</div><div><div class="ct">Likes en la Página Facebook</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('1,000 Likes Página Facebook','$24.99','1,000 Likes para tu Página Facebook')"><div class="pq">1,000</div><div class="pt">Likes Página FB</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('2,000 Likes Página Facebook','$34.99','2,000 Likes para tu Página Facebook')"><div class="pq">2,000</div><div class="pt">Likes Página FB</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('4,000 Likes Página Facebook','$59.99','4,000 Likes para tu Página Facebook')"><div class="pb">⭐ POPULAR</div><div class="pq">4,000</div><div class="pt">Likes Página FB</div><div class="pp">$59.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('10,000 Likes Página Facebook','$99.99','10,000 Likes para tu Página Facebook')"><div class="pq">10,000</div><div class="pt">Likes Página FB</div><div class="pp">$99.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">📌</div><div><div class="ct">Likes en Post Facebook</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('3,000 Likes Post Facebook','$24.99','3,000 Likes Post Facebook')"><div class="pq">3,000</div><div class="pt">Likes Post FB</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('6,000 Likes Post Facebook','$34.99','6,000 Likes Post Facebook')"><div class="pq">6,000</div><div class="pt">Likes Post FB</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('10,000 Likes Post Facebook','$59.99','10,000 Likes Post Facebook')"><div class="pb">⭐ POPULAR</div><div class="pq">10,000</div><div class="pt">Likes Post FB</div><div class="pp">$59.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('20,000 Likes Post Facebook','$99.99','20,000 Likes Post Facebook')"><div class="pq">20,000</div><div class="pt">Likes Post FB</div><div class="pp">$99.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">👥</div><div><div class="ct">Seguidores Facebook (Universales)</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('500 Seguidores Facebook','$24.99','500 Seguidores para Facebook')"><div class="pq">500</div><div class="pt">Seguidores FB</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('1,000 Seguidores Facebook','$34.99','1,000 Seguidores para Facebook')"><div class="pb">⭐ POPULAR</div><div class="pq">1,000</div><div class="pt">Seguidores FB</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('2,000 Seguidores Facebook','$49.99','2,000 Seguidores para Facebook')"><div class="pq">2,000</div><div class="pt">Seguidores FB</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('5,000 Seguidores Facebook','$99.99','5,000 Seguidores para Facebook')"><div class="pq">5,000</div><div class="pt">Seguidores FB</div><div class="pp">$99.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">💬</div><div><div class="ct">Comentarios Hispanos Facebook</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('50 Comentarios Hispanos Facebook','$29.99','50 Comentarios Hispanos Facebook')"><div class="pq">50</div><div class="pt">Comentarios Hispanos</div><div class="pp">$29.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('100 Comentarios Hispanos Facebook','$49.99','100 Comentarios Hispanos Facebook')"><div class="pb">⭐ POPULAR</div><div class="pq">100</div><div class="pt">Comentarios Hispanos</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('200 Comentarios Hispanos Facebook','$74.99','200 Comentarios Hispanos Facebook')"><div class="pq">200</div><div class="pt">Comentarios Hispanos</div><div class="pp">$74.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('300 Comentarios Hispanos Facebook','$99.99','300 Comentarios Hispanos Facebook')"><div class="pq">300</div><div class="pt">Comentarios Hispanos</div><div class="pp">$99.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">▶️</div><div><div class="ct">Views Facebook</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('10,000 Views Facebook','$29.99','10,000 Views Facebook')"><div class="pq">10K</div><div class="pt">Views FB</div><div class="pp">$29.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('25,000 Views Facebook','$49.99','25,000 Views Facebook')"><div class="pb">⭐ POPULAR</div><div class="pq">25K</div><div class="pt">Views FB</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('40,000 Views Facebook','$74.99','40,000 Views Facebook')"><div class="pq">40K</div><div class="pt">Views FB</div><div class="pp">$74.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('60,000 Views Facebook','$99.99','60,000 Views Facebook')"><div class="pq">60K</div><div class="pt">Views FB</div><div class="pp">$99.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+  </div>
+
+  <!-- TWITTER/X -->
+  <div id="p-tw" style="display:none">
+    <div class="cath"><div class="ci">🐦</div><div><div class="ct">Seguidores Twitter/X</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('500 Seguidores Twitter/X','$24.99','500 Seguidores Twitter/X')"><div class="pq">500</div><div class="pt">Seguidores X</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('1,000 Seguidores Twitter/X','$34.99','1,000 Seguidores Twitter/X')"><div class="pb">⭐ POPULAR</div><div class="pq">1,000</div><div class="pt">Seguidores X</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('2,000 Seguidores Twitter/X','$49.99','2,000 Seguidores Twitter/X')"><div class="pq">2,000</div><div class="pt">Seguidores X</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('4,000 Seguidores Twitter/X','$84.99','4,000 Seguidores Twitter/X')"><div class="pq">4,000</div><div class="pt">Seguidores X</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('6,000 Seguidores Twitter/X','$119.99','6,000 Seguidores Twitter/X')"><div class="pq">6,000</div><div class="pt">Seguidores X</div><div class="pp">$119.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('10,000 Seguidores Twitter/X','$199.99','10,000 Seguidores Twitter/X')"><div class="pq">10,000</div><div class="pt">Seguidores X</div><div class="pp">$199.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">❤️</div><div><div class="ct">Likes Twitter/X</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('3,000 Likes Twitter/X','$24.99','3,000 Likes Twitter/X')"><div class="pq">3,000</div><div class="pt">Likes X</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('6,000 Likes Twitter/X','$34.99','6,000 Likes Twitter/X')"><div class="pq">6,000</div><div class="pt">Likes X</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('10,000 Likes Twitter/X','$49.99','10,000 Likes Twitter/X')"><div class="pb">⭐ POPULAR</div><div class="pq">10,000</div><div class="pt">Likes X</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('20,000 Likes Twitter/X','$84.99','20,000 Likes Twitter/X')"><div class="pq">20,000</div><div class="pt">Likes X</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+    <div class="cath"><div class="ci">🔁</div><div><div class="ct">Retweets · Reproducciones · Comentarios Twitter/X</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('1,000 Retweets Twitter/X','$24.99','1,000 Retweets Twitter/X')"><div class="pq">1,000</div><div class="pt">Retweets X</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('2,000 Retweets Twitter/X','$34.99','2,000 Retweets Twitter/X')"><div class="pb">⭐ POPULAR</div><div class="pq">2,000</div><div class="pt">Retweets X</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('3,000 Retweets Twitter/X','$49.99','3,000 Retweets Twitter/X')"><div class="pq">3,000</div><div class="pt">Retweets X</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('20K Reprod. Twitter/X','$24.99','20,000 Reproducciones Twitter/X')"><div class="pq">20K</div><div class="pt">Reprod. X</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('60K Reprod. Twitter/X','$49.99','60,000 Reproducciones Twitter/X')"><div class="pq">60K</div><div class="pt">Reprod. X</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('100K Reprod. Twitter/X','$84.99','100,000 Reproducciones Twitter/X')"><div class="pq">100K</div><div class="pt">Reprod. X</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('50 Coment. Twitter/X','$24.99','50 Comentarios Personalizados Twitter/X')"><div class="pq">50</div><div class="pt">Comentarios X</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('100 Coment. Twitter/X','$34.99','100 Comentarios Personalizados Twitter/X')"><div class="pb">⭐ POPULAR</div><div class="pq">100</div><div class="pt">Comentarios X</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('250 Coment. Twitter/X','$49.99','250 Comentarios Personalizados Twitter/X')"><div class="pq">250</div><div class="pt">Comentarios X</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+  </div>
+
+  <!-- AUTOLIKES/VIEWS -->
+  <div id="p-au" style="display:none">
+    <div class="cath"><div class="ci">❤️</div><div><div class="ct">Servicio de Autolikes</div><div class="cd">Likes automáticos en cada publicación · Mínimo 100 likes/post · Distribuibles</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('3,000 Autolikes','$24.99','3,000 Autolikes distribuidos automáticamente')"><div class="pq">3,000</div><div class="pt">Autolikes</div><div class="pp">$24.99</div><button class="bbuy">Activar</button></div>
+      <div class="pc feat" onclick="openModal('6,000 Autolikes','$34.99','6,000 Autolikes distribuidos automáticamente')"><div class="pb">⭐ POPULAR</div><div class="pq">6,000</div><div class="pt">Autolikes</div><div class="pp">$34.99</div><button class="bbuy">Activar</button></div>
+      <div class="pc" onclick="openModal('10,000 Autolikes','$49.99','10,000 Autolikes distribuidos automáticamente')"><div class="pq">10,000</div><div class="pt">Autolikes</div><div class="pp">$49.99</div><button class="bbuy">Activar</button></div>
+      <div class="pc" onclick="openModal('20,000 Autolikes','$84.99','20,000 Autolikes distribuidos automáticamente')"><div class="pq">20,000</div><div class="pt">Autolikes</div><div class="pp">$84.99</div><button class="bbuy">Activar</button></div>
+    </div>
+    <div class="cath"><div class="ci">👁️</div><div><div class="ct">Servicio de Autoviews</div><div class="cd">Reproducciones automáticas en cada video · Mínimo 1,000 views/post · Distribuibles</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('20,000 Autoviews','$24.99','20,000 Autoviews distribuidos automáticamente')"><div class="pq">20K</div><div class="pt">Autoviews</div><div class="pp">$24.99</div><button class="bbuy">Activar</button></div>
+      <div class="pc feat" onclick="openModal('40,000 Autoviews','$39.99','40,000 Autoviews distribuidos automáticamente')"><div class="pb">⭐ POPULAR</div><div class="pq">40K</div><div class="pt">Autoviews</div><div class="pp">$39.99</div><button class="bbuy">Activar</button></div>
+      <div class="pc" onclick="openModal('60,000 Autoviews','$54.99','60,000 Autoviews distribuidos automáticamente')"><div class="pq">60K</div><div class="pt">Autoviews</div><div class="pp">$54.99</div><button class="bbuy">Activar</button></div>
+      <div class="pc" onclick="openModal('100,000 Autoviews','$69.99','100,000 Autoviews distribuidos automáticamente')"><div class="pq">100K</div><div class="pt">Autoviews</div><div class="pp">$69.99</div><button class="bbuy">Activar</button></div>
+    </div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:16px 20px;margin-top:18px;color:var(--muted);font-size:13px;line-height:1.6">💡 <strong style="color:#fff">Nota:</strong> Puedes distribuir los likes y views en los posts que desees. Comunícanos tus preferencias por WhatsApp.</div>
+  </div>
+
+  <!-- ENGAGEMENT -->
+  <div id="p-en" style="display:none">
+    <div class="cath"><div class="ci">📊</div><div><div class="ct">Paquetes de Engagement</div><div class="cd">Alcance + Impresiones + Guardados + Compartidos + Repost · Recomendado combinar con Likes y Views</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('Engagement Pack 1','$29.99','6,000 Alcance+Impresiones · 2,000 Guardados+Compartidos · 300 Repost')"><div class="pq">PKG 1</div><div class="pt">Engagement</div><div class="pbo">🎯 6K Alcance · 2K Guardados · 300 Repost</div><div class="pp">$29.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('Engagement Pack 2','$44.99','12,000 Alcance+Impresiones · 4,000 Guardados+Compartidos · 600 Repost')"><div class="pb">⭐ POPULAR</div><div class="pq">PKG 2</div><div class="pt">Engagement</div><div class="pbo">🎯 12K Alcance · 4K Guardados · 600 Repost</div><div class="pp">$44.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('Engagement Pack 3','$64.99','25,000 Alcance+Impresiones · 6,000 Guardados+Compartidos · 1,000 Repost')"><div class="pq">PKG 3</div><div class="pt">Engagement</div><div class="pbo">🎯 25K Alcance · 6K Guardados · 1K Repost</div><div class="pp">$64.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('Engagement Pack 4','$89.99','50,000 Alcance+Impresiones · 12,000 Guardados+Compartidos · 2,000 Repost')"><div class="pq">PKG 4</div><div class="pt">Engagement</div><div class="pbo">🎯 50K Alcance · 12K Guardados · 2K Repost</div><div class="pp">$89.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('Engagement Pack 5','$119.99','100,000 Alcance+Impresiones · 20,000 Guardados · 4,000 Repost')"><div class="pq">PKG 5</div><div class="pt">Engagement</div><div class="pbo">🎯 100K Alcance · 20K Guardados · 4K Repost</div><div class="pp">$119.99</div><button class="bbuy">Comprar</button></div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- PROMO X2 -->
+<style>
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:32px}
+.pxc{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:24px;position:relative;transition:.3s;cursor:pointer}
+.pxc:hover{border-color:rgba(233,30,140,.3);transform:translateY(-3px);box-shadow:0 12px 40px rgba(233,30,140,.08)}
+.pxc.feat{border-color:rgba(245,197,24,.3);background:linear-gradient(135deg,rgba(124,58,237,.09),rgba(233,30,140,.05))}
+.pxq{font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:1}
+.pxs{color:var(--muted);font-size:12px;margin:8px 0 14px;line-height:1.5}
+.pxp{font-size:28px;font-weight:800;color:var(--gold);margin-bottom:14px}
+.bpx{width:100%;background:var(--grad);border:none;color:#fff;font-weight:700;padding:11px;border-radius:10px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s}
+.bpx:hover{opacity:.88}
+
+.stabs{display:flex;gap:8px;margin:26px 0 30px}
+.stab{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--muted);padding:10px 24px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
+.stab.active{background:var(--grad);color:#fff;border-color:transparent}
+.splans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.scard{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:24px;transition:.3s;cursor:pointer}
+.scard:hover{border-color:rgba(233,30,140,.3);transform:translateY(-3px)}
+.sqt{font-family:'Bebas Neue',sans-serif;font-size:48px;line-height:1}
+.slb{font-size:10px;color:var(--muted);letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:9px}
+.sinc{color:#5b8aff;font-size:12px;font-weight:600;margin-bottom:16px}
+.spr{font-size:32px;font-weight:800;color:var(--gold);margin-bottom:16px}
+
+.refbox{background:linear-gradient(135deg,rgba(124,58,237,.09),rgba(233,30,140,.04));border:1px solid rgba(124,58,237,.15);border-radius:24px;padding:52px 44px;text-align:center}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:34px 0}
+.rcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px}
+.rnum{font-family:'Bebas Neue',sans-serif;font-size:48px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rlb{font-size:10px;color:var(--muted);letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-top:4px;line-height:1.5}
+
+.aigrid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.aifeats{display:flex;flex-direction:column;gap:20px;margin-top:26px}
+.aif{display:flex;align-items:flex-start;gap:13px}
+.afic{width:40px;height:40px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.aftit{font-size:15px;font-weight:700;margin-bottom:3px}
+.afd{color:var(--muted);font-size:13px;line-height:1.5}
+.chatbox{background:var(--card2);border:1px solid rgba(255,255,255,.07);border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.chdr{background:var(--grad);padding:14px 18px;display:flex;align-items:center;gap:11px}
+.cav{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:18px}
+.cmsgs{padding:16px;display:flex;flex-direction:column;gap:10px;min-height:250px;max-height:290px;overflow-y:auto}
+.msg{max-width:88%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.5}
+.msg.u{align-self:flex-end;background:var(--grad);color:#fff;border-radius:14px 14px 4px 14px}
+.msg.b{align-self:flex-start;background:rgba(255,255,255,.06);border-radius:14px 14px 14px 4px}
+.cinp{padding:13px;border-top:1px solid rgba(255,255,255,.05);display:flex;gap:9px}
+.cinp input{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);color:#fff;padding:10px 13px;border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;outline:none;transition:.2s}
+.cinp input:focus{border-color:var(--pink)}
+.cinp input::placeholder{color:var(--muted)}
+.csend{background:var(--grad);border:none;color:#fff;font-weight:700;padding:10px 16px;border-radius:10px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:13px;white-space:nowrap}
+
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.tcard{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:24px;transition:.3s}
+.tcard:hover{transform:translateY(-3px);border-color:rgba(233,30,140,.18)}
+.tstars{color:var(--gold);font-size:16px;margin-bottom:12px}
+.ttxt{color:rgba(255,255,255,.8);font-size:14px;line-height:1.65;margin-bottom:16px;font-style:italic}
+.tauth{display:flex;align-items:center;gap:10px}
+.tav{width:40px;height:40px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0}
+
+.paybox{background:linear-gradient(135deg,rgba(233,30,140,.05),rgba(124,58,237,.04));border:1px solid rgba(233,30,140,.1);border-radius:24px;padding:44px;text-align:center}
+.pmethods{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0}
+.pmet{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:11px;padding:11px 18px;font-size:13px;font-weight:600;transition:.2s;cursor:pointer}
+.pmet:hover{background:rgba(255,255,255,.1);border-color:rgba(233,30,140,.3);transform:translateY(-2px)}
+
+.faq-list{max-width:820px;margin:36px auto 0}
+.fi{border-bottom:1px solid rgba(255,255,255,.06)}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font-size:15px;font-weight:600;transition:.2s;gap:14px}
+.fq:hover{color:var(--pink)}
+.ficon{color:var(--purple);font-size:13px;transition:.3s;flex-shrink:0}
+.fa{display:none;padding:0 0 16px;color:var(--muted);font-size:14px;line-height:1.7}
+.fi.open .fa{display:block}
+.fi.open .ficon{transform:rotate(180deg);color:var(--pink)}
+
+.cgrid2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:36px}
+.cinfo{display:flex;flex-direction:column;gap:14px}
+.citem{display:flex;align-items:center;gap:13px;background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:14px;padding:16px}
+.cion{width:44px;height:44px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.clb{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.cvl{font-weight:700;font-size:14px;color:#fff;text-decoration:none}
+.cvl:hover{color:var(--pink)}
+.cform{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:20px;padding:26px}
+.fg2{margin-bottom:14px}
+.fg2 label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;letter-spacing:.5px;text-transform:uppercase}
+.fg2 input,.fg2 textarea,.fg2 select{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#fff;padding:12px 14px;border-radius:10px;font-size:14px;font-family:'Outfit',sans-serif;outline:none;transition:.2s}
+.fg2 input:focus,.fg2 textarea:focus{border-color:var(--pink)}
+.fg2 textarea{resize:vertical;min-height:95px}
+.fg2 select option{background:#1a1a2e}
+
+.fgrid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:34px}
+.fdesc{color:var(--muted);font-size:13px;line-height:1.6;margin-top:10px}
+.fcol h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;color:#fff}
+.flinks{display:flex;flex-direction:column;gap:8px}
+.flinks a{color:var(--muted);text-decoration:none;font-size:13px;transition:.2s}
+.flinks a:hover{color:var(--pink)}
+.fbot{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.04);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fbot p{color:var(--muted);font-size:12px}
+
+.moverlay{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:none;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(10px)}
+.moverlay.open{display:flex}
+.modal{background:var(--card2);border:1px solid rgba(233,30,140,.2);border-radius:24px;padding:32px;max-width:500px;width:100%;position:relative;max-height:90vh;overflow-y:auto}
+.modal::-webkit-scrollbar{width:3px}
+.mclose{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:.2s}
+.mclose:hover{background:rgba(233,30,140,.3)}
+.mtitle{font-family:'Bebas Neue',sans-serif;font-size:30px;margin-bottom:6px}
+.mpkg{background:linear-gradient(135deg,rgba(233,30,140,.09),rgba(124,58,237,.09));border:1px solid rgba(233,30,140,.2);border-radius:12px;padding:13px 17px;margin-bottom:16px}
+.mpname{font-size:17px;font-weight:800;color:var(--pink)}
+.mpdesc{color:var(--muted);font-size:12px;margin-top:3px}
+.mprice{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--gold);margin-bottom:4px}
+
+.ubox{background:rgba(0,214,143,.06);border:1px solid rgba(0,214,143,.18);border-radius:12px;padding:13px 17px;margin:14px 0}
+.ubox h4{font-size:13px;font-weight:700;color:#00d68f;margin-bottom:4px}
+.ubox p{color:rgba(255,255,255,.65);font-size:12px;margin-bottom:9px}
+.buyes{background:#00d68f;color:#000;border:none;font-weight:700;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:12px}
+.dbox{background:rgba(91,138,255,.06);border:1px solid rgba(91,138,255,.18);border-radius:12px;padding:13px 17px;margin:12px 0;display:none}
+.dbox h4{font-size:13px;font-weight:700;color:#5b8aff;margin-bottom:3px}
+.dbox p{color:rgba(255,255,255,.55);font-size:12px;margin-bottom:8px}
+
+.chkform{display:flex;flex-direction:column;gap:11px;margin-top:14px}
+.chkform input{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff;padding:12px 14px;border-radius:10px;font-size:14px;font-family:'Outfit',sans-serif;outline:none;transition:.2s;width:100%}
+.chkform input:focus{border-color:var(--pink)}
+.chkform input::placeholder{color:var(--muted)}
+.plybl{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px}
+.payog{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px}
+.payo{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:10px 6px;text-align:center;cursor:pointer;transition:.2s;font-size:11px;font-weight:600;line-height:1.3}
+.payo:hover,.payo.sel{background:rgba(233,30,140,.1);border-color:var(--pink);color:var(--pink)}
+.pico{font-size:18px;display:block;margin-bottom:3px}
+.border{width:100%;background:var(--grad);border:none;color:#fff;font-weight:800;padding:14px;border-radius:12px;font-size:15px;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;margin-top:4px}
+.border:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(233,30,140,.4)}
+.secnote{display:flex;align-items:center;justify-content:center;gap:7px;color:var(--muted);font-size:11px;margin-top:9px}
+.sucview{display:none;text-align:center;padding:16px}
+.sucview.show{display:block}
+
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:999;background:#25d366;color:#000;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 4px 24px rgba(37,211,102,.4);text-decoration:none;animation:waf 3s ease-in-out infinite}
+@keyframes waf{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+@media(max-width:1024px){.fgrid{grid-template-columns:1fr 1fr;gap:24px}.aigrid{grid-template-columns:1fr;gap:32px}.splans{grid-template-columns:1fr}.sg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{padding:0 18px}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:rgba(7,7,15,.98);flex-direction:column;padding:18px;gap:14px;border-bottom:1px solid rgba(255,255,255,.04)}.nav-links.open{display:flex}.hamburger{display:flex}section{padding:52px 18px}.trial-w{padding:0 18px 26px}.sg{padding:0 18px;grid-template-columns:repeat(2,1fr)}.tgrid{grid-template-columns:1fr}.rgrid{grid-template-columns:1fr}.cgrid2{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.payog{grid-template-columns:repeat(4,1fr)}.fbot{flex-direction:column;text-align:center}.ubanner{flex-direction:column;text-align:center}.modal{padding:20px}}
+</style>
+
+<section id="promox2" style="background:var(--bg2)">
+<div class="container">
+  <div class="slabel">Promociones Especiales</div>
+  <h2 class="stitle">PROMO X2 — 2 REDES EN 1</h2>
+  <p class="ssub">Impulsa Instagram + TikTok o Facebook por un único precio. Las cantidades aplican para AMBAS redes seleccionadas.</p>
+  <div class="pgrid">
+    <div class="pxc" onclick="openModal('Promo X2 — 2,000 Seg. en 2 Redes','$59.99','2,000 Seg + 2,000 Likes + 6,000 Views en CADA red seleccionada')"><div class="pxq">2,000 SEG.</div><div class="pxs">+ 2,000 Likes + 6,000 Views — en cada red</div><div class="pxp">$59.99</div><button class="bpx">Activar X2</button></div>
+    <div class="pxc feat" onclick="openModal('Promo X2 — 4,000 Seg. en 2 Redes','$79.99','4,000 Seg + 4,000 Likes + 12,000 Views en CADA red seleccionada')"><div class="pb" style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;font-size:10px;font-weight:800;padding:3px 12px;border-radius:50px;letter-spacing:1px;white-space:nowrap">🏆 TOP VENTA</div><div class="pxq">4,000 SEG.</div><div class="pxs">+ 4,000 Likes + 12,000 Views — en cada red</div><div class="pxp">$79.99</div><button class="bpx">Activar X2</button></div>
+    <div class="pxc" onclick="openModal('Promo X2 — 8,000 Seg. en 2 Redes','$129.99','8,000 Seg + 6,000 Likes + 24,000 Views en CADA red seleccionada')"><div class="pxq">8,000 SEG.</div><div class="pxs">+ 6,000 Likes + 24,000 Views — en cada red</div><div class="pxp">$129.99</div><button class="bpx">Activar X2</button></div>
+    <div class="pxc feat" onclick="openModal('Promo X2 — 12,000 Seg. en 2 Redes','$184.99','12,000 Seg + 8,000 Likes + 48,000 Views en CADA red seleccionada')"><div class="pb" style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;font-size:10px;font-weight:800;padding:3px 12px;border-radius:50px;letter-spacing:1px;white-space:nowrap">🥇 MEJOR VALOR</div><div class="pxq">12,000 SEG.</div><div class="pxs">+ 8,000 Likes + 48,000 Views — en cada red</div><div class="pxp">$184.99</div><button class="bpx">Activar X2</button></div>
+    <div class="pxc" onclick="openModal('Promo X2 — 20,000 Seg. en 2 Redes','$299.99','20,000 Seg + 10,000 Likes + 96,000 Views en CADA red seleccionada')"><div class="pxq">20,000 SEG.</div><div class="pxs">+ 10,000 Likes + 96,000 Views — en cada red</div><div class="pxp">$299.99</div><button class="bpx">Activar X2</button></div>
+  </div>
+</div>
+</section>
+
+<!-- PLANES MENSUALES -->
+<section id="planes">
+<div class="container">
+  <div class="slabel">Suscripciones</div>
+  <h2 class="stitle">PLANES MENSUALES<br>SEGUIDORES LATINOS</h2>
+  <p class="ssub">Para Instagram o TikTok. Más meses = más descuento. Mismos planes para Facebook con seguidores globales.</p>
+  <div class="stabs" style="margin-top:26px">
+    <button class="stab active" onclick="showSub('3m',this)">3 Meses</button>
+    <button class="stab" onclick="showSub('6m',this)">6 Meses</button>
+    <button class="stab" onclick="showSub('12m',this)">1 Año 🔥</button>
+  </div>
+  <div id="sub-3m" class="splans">
+    <div class="scard" onclick="openModal('Plan 1,000 Seg/mes — 3 meses','$29.99/mes','1,000 Seg. Latinos/mes + 1,000 Likes + 3,000 Views · 3 meses')"><div class="sqt">1,000</div><div class="slb">Seg/Mes · 3 meses</div><div class="sinc">+ 1,000 Likes + 3,000 Views / mes</div><div class="spr">$29.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+    <div class="scard" onclick="openModal('Plan 2,000 Seg/mes — 3 meses','$39.99/mes','2,000 Seg. Latinos/mes + 2,000 Likes + 6,000 Views · 3 meses')"><div class="sqt">2,000</div><div class="slb">Seg/Mes · 3 meses</div><div class="sinc">+ 2,000 Likes + 6,000 Views / mes</div><div class="spr">$39.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+    <div class="scard" onclick="openModal('Plan 5,000 Seg/mes — 3 meses','$89.99/mes','5,000 Seg. Latinos/mes + 5,000 Likes + 10,000 Views · 3 meses')"><div class="sqt">5,000</div><div class="slb">Seg/Mes · 3 meses</div><div class="sinc">+ 5,000 Likes + 10,000 Views / mes</div><div class="spr">$89.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+  </div>
+  <div id="sub-6m" class="splans" style="display:none">
+    <div class="scard" onclick="openModal('Plan 1,000 Seg/mes — 6 meses','$24.99/mes','1,000 Seg. Latinos/mes + 1,000 Likes + 3,000 Views · 6 meses')"><div class="sqt">1,000</div><div class="slb">Seg/Mes · 6 meses</div><div class="sinc">+ 1,000 Likes + 3,000 Views / mes</div><div class="spr">$24.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+    <div class="scard" onclick="openModal('Plan 2,000 Seg/mes — 6 meses','$34.99/mes','2,000 Seg. Latinos/mes + 2,000 Likes + 6,000 Views · 6 meses')"><div class="sqt">2,000</div><div class="slb">Seg/Mes · 6 meses</div><div class="sinc">+ 2,000 Likes + 6,000 Views / mes</div><div class="spr">$34.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+    <div class="scard" onclick="openModal('Plan 5,000 Seg/mes — 6 meses','$79.99/mes','5,000 Seg. Latinos/mes + 5,000 Likes + 10,000 Views · 6 meses')"><div class="sqt">5,000</div><div class="slb">Seg/Mes · 6 meses</div><div class="sinc">+ 5,000 Likes + 10,000 Views / mes</div><div class="spr">$79.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+  </div>
+  <div id="sub-12m" class="splans" style="display:none">
+    <div class="scard" onclick="openModal('Plan 1,000 Seg/mes — 1 año','$21.99/mes','1,000 Seg. Latinos/mes + 1,000 Likes + 3,000 Views · 12 meses')"><div class="sqt">1,000</div><div class="slb">Seg/Mes · 1 año</div><div class="sinc">+ 1,000 Likes + 3,000 Views / mes</div><div class="spr">$21.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+    <div class="scard" onclick="openModal('Plan 2,000 Seg/mes — 1 año','$31.99/mes','2,000 Seg. Latinos/mes + 2,000 Likes + 6,000 Views · 12 meses')"><div class="sqt">2,000</div><div class="slb">Seg/Mes · 1 año</div><div class="sinc">+ 2,000 Likes + 6,000 Views / mes</div><div class="spr">$31.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+    <div class="scard" onclick="openModal('Plan 5,000 Seg/mes — 1 año','$69.99/mes','5,000 Seg. Latinos/mes + 5,000 Likes + 10,000 Views · 12 meses')"><div class="sqt">5,000</div><div class="slb">Seg/Mes · 1 año</div><div class="sinc">+ 5,000 Likes + 10,000 Views / mes</div><div class="spr">$69.99<span style="font-size:14px;color:var(--muted)">/mes</span></div><button class="bbuyo">Suscribirme</button></div>
+  </div>
+</div>
+</section>
+
+<!-- REFERIDOS -->
+<section id="referidos" style="background:var(--bg2)">
+<div class="container">
+  <div class="refbox">
+    <div class="slabel" style="text-align:center">Programa de Referidos</div>
+    <h2 class="stitle" style="text-align:center">RECOMIENDA Y GANA<br>BONIFICACIONES</h2>
+    <p style="color:var(--muted);max-width:560px;margin:0 auto;font-size:16px;line-height:1.6">Refiere creadores, emprendedores o negocios y recibe recompensas directas en tu cuenta. Bonificación válida cuando el referido activa su primer paquete.</p>
+    <div class="rgrid">
+      <div class="rcard"><div class="rnum">500</div><div class="rlb">Seguidores Latinos<br>(o 1,000 Globales)</div></div>
+      <div class="rcard"><div class="rnum">1,000</div><div class="rlb">Likes de Regalo</div></div>
+      <div class="rcard"><div class="rnum">3,000</div><div class="rlb">Visualizaciones</div></div>
+    </div>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:26px">por cada referido activo — ¡sin límite de referidos!</p>
+    <button class="btn-p" onclick="openModal('Enlace de Referido','GRATIS','Obtén tu enlace personalizado y gana bonificaciones por cada amigo que actives')">Obtener Mi Enlace 🎁</button>
+  </div>
+</div>
+</section>
+
+<!-- IA ADVISOR -->
+<section id="ia">
+<div class="container">
+  <div class="aigrid">
+    <div>
+      <div class="slabel">Inteligencia Artificial</div>
+      <h2 class="stitle">TU ASESOR DE CRECIMIENTO IA</h2>
+      <p class="ssub">Cuéntanos tu nicho, plataforma y metas. El IA analiza tu perfil y te recomienda el paquete que maximiza tu inversión.</p>
+      <div class="aifeats">
+        <div class="aif"><div class="afic">🎯</div><div><div class="aftit">Estrategia por Nicho</div><div class="afd">Fitness, moda, gaming, negocios, cocina — el IA sabe qué funciona para cada nicho.</div></div></div>
+        <div class="aif"><div class="afic">📦</div><div><div class="aftit">Recomendación Personalizada</div><div class="afd">Según tus seguidores actuales, te dice exactamente qué paquete maximiza tu retorno.</div></div></div>
+        <div class="aif"><div class="afic">💡</div><div><div class="aftit">Tips de Contenido Gratis</div><div class="afd">Estrategias para mantener a tu nueva audiencia latina enganchada y convertirla en clientes.</div></div></div>
+      </div>
+    </div>
+    <div class="chatbox">
+      <div class="chdr"><div class="cav">🤖</div><div><div style="font-weight:700;font-size:14px">Viralizame IA</div><div style="font-size:11px;opacity:.85">Asesor de Crecimiento · En línea ●</div></div></div>
+      <div class="cmsgs" id="chatMsgs">
+        <div class="msg b">¡Hola! 👋 Soy tu asesor de crecimiento. ¿Cuántos seguidores tienes actualmente y en qué red social quieres crecer?</div>
+        <div class="msg u">Tengo 800 seguidores en Instagram, soy coach de fitness</div>
+        <div class="msg b">¡Perfecto nicho! Con 800 seg, para llegar a 10K+ te recomiendo:<br><br>🏆 <strong>1,000 Seg. Latinos $34.99</strong> + Autolikes $24.99 = $59.98<br><br>Los autolikes dispararán tu engagement y las marcas de fitness lo notarán. ¿Lo activamos?</div>
+      </div>
+      <div class="cinp">
+        <input type="text" id="chatInput" placeholder="Ej: Tengo 2,000 seg en TikTok, soy cantante..." onkeydown="if(event.key==='Enter')sendMsg()">
+        <button class="csend" onclick="sendMsg()">Enviar →</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--bg2)">
+<div class="container">
+  <div class="slabel">Testimonios</div>
+  <h2 class="stitle">LO QUE DICEN<br>NUESTROS CLIENTES</h2>
+  <div class="tgrid">
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttxt">"Compré 1,000 seguidores latinos y llegaron en menos de 3 horas. La audiencia es real, mis posts tienen más engagement. Marcas ya me están contactando."</p><div class="tauth"><div class="tav">ML</div><div><div style="font-weight:700;font-size:14px">María López</div><div style="color:var(--muted);font-size:12px">@mariafit · 18K seguidores</div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttxt">"Los autolikes son un cambio total. Cada post que subo ya tiene likes en minutos. Mis marcas colaboradoras quedaron impresionadas con mi engagement rate."</p><div class="tauth"><div class="tav">CR</div><div><div style="font-weight:700;font-size:14px">Carlos Ramírez</div><div style="color:var(--muted);font-size:12px">@carlosmx · 42K seguidores</div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttxt">"La promo X2 para TikTok e Instagram fue brutal. Doble crecimiento en ambas redes por un solo pago. Lo recomiendo 100%, el mejor servicio que he probado."</p><div class="tauth"><div class="tav">VG</div><div><div style="font-weight:700;font-size:14px">Valentina García</div><div style="color:var(--muted);font-size:12px">@valentinastyle · 87K seguidores</div></div></div></div>
+  </div>
+</div>
+</section>
+
+<!-- PAYMENT -->
+<section>
+<div class="container">
+  <div class="paybox">
+    <div class="slabel" style="text-align:center">Métodos de Pago</div>
+    <h2 class="stitle" style="font-size:clamp(32px,5vw,54px);text-align:center">PAGA COMO PREFIERAS</h2>
+    <p style="color:var(--muted);font-size:15px">Pago seguro y confirmación inmediata · Sin contraseñas</p>
+    <div class="pmethods">
+      <div class="pmet">💳 Tarjeta Crédito/Débito</div>
+      <div class="pmet">💰 Zelle</div>
+      <div class="pmet">₿ Criptomonedas</div>
+      <div class="pmet">🅿️ PayPal</div>
+      <div class="pmet">🏦 Bancolombia</div>
+      <div class="pmet">🏛️ Banesco Panamá</div>
+      <div class="pmet">📱 Pago Móvil Venezuela</div>
+    </div>
+    <p style="color:var(--muted);font-size:12px">🔒 SSL Certificado · Pago 100% seguro · Protección al comprador</p>
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg2)">
+<div class="container" style="text-align:center">
+  <div class="slabel">Preguntas Frecuentes</div>
+  <h2 class="stitle">¿TIENES DUDAS?<br>NOSOTROS RESPONDEMOS</h2>
+  <div class="faq-list">
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Cómo funciona el servicio? <span class="ficon">▼</span></div><div class="fa">Utilizamos técnicas similares a las que emplean marcas e influencers populares para aumentar seguidores de manera exponencial. Generamos un movimiento masivo de usuarios que comenzarán a seguir tu cuenta en un periodo corto, simulando comportamiento orgánico natural. Podemos enviar entre 200 y 600 seguidores latinos por día, o entre 5,000 y 30,000 universales diarios sin que Instagram lo detecte como actividad sospechosa.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿El servicio afecta mi cuenta? ¿Es seguro? <span class="ficon">▼</span></div><div class="fa">Nuestro servicio es 100% seguro y garantizado. No afecta tu cuenta de ninguna manera, ya que no solicitamos tu contraseña y los seguidores se generan a través de una estrategia completamente natural. Nunca pedimos acceso a tu cuenta — solo necesitamos tu nombre de usuario público.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Necesitan mi contraseña para brindar el servicio? <span class="ficon">▼</span></div><div class="fa">No, nunca pedimos tu contraseña. Solo necesitamos el nombre de usuario de la cuenta a la que deseas que lleguen los seguidores, ¡y nosotros nos encargamos del resto! Tu cuenta está 100% segura en todo momento.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Cuánto tiempo tarda en llegar el servicio? <span class="ficon">▼</span></div><div class="fa"><strong>Seguidores Universales:</strong> 1K–25K: 1–2 días · 25K–50K: 3–5 días · 50K–100K: 5–8 días.<br><strong>Seguidores Latinos:</strong> 500: 1–2 días · 1,000: 2–5 días · 2,000: 4–7 días · 4,000: 6–10 días · 6,000: 8–14 días · 10,000: 12–18 días.<br><strong>Likes y Views:</strong> Llegan casi al instante una vez confirmado el pago, dentro de las primeras 2–6 horas.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Cuáles son las garantías de cada servicio? <span class="ficon">▼</span></div><div class="fa"><strong>Seguidores Latinos:</strong> ≈60% perfiles latinos reales. Garantía de 30 días.<br><strong>Seguidores Universales:</strong> Perfiles con foto y publicaciones. Garantía 30 días TikTok / 1 año Instagram.<br><strong>Seguidores 100% Reales:</strong> Mayor calidad, crecimiento natural y progresivo.<br><br>Cada paquete incluye un 10% adicional de compensación. Si compras 1,000, recibirás 1,100. Si durante la garantía los seguidores bajan, hacemos recarga gratis.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Puedo distribuir los likes y views en diferentes posts? <span class="ficon">▼</span></div><div class="fa">¡Sí! Puedes distribuir los likes y views en los posts que desees — no tienen que ser automáticos (mínimo 100 likes o 1,000 views por post). Cuéntanos cómo quieres distribuirlos al hacer el pedido y lo gestionamos sin costo adicional vía WhatsApp.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Cómo sé que son confiables? <span class="ficon">▼</span></div><div class="fa">Contamos con múltiples cuentas oficiales de atención al cliente en Instagram con más de 20,000 seguidores cada una:<br><br>📸 @difundetumarca.ahora<br>📸 @marcaexitosa.usa<br>📸 @marketingideal.esp<br>📸 @impulsolatino.usa<br><br>Si hubiera algún problema con nuestros servicios, estas cuentas no tendrían la confianza y actividad que poseen. Además contamos con 50,000+ creadores satisfechos y 2.8M+ seguidores entregados.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Dónde están ubicados? <span class="ficon">▼</span></div><div class="fa">Nuestra oficina está ubicada en: 254 Chapman Road, Newark, DE 19702, United States. Sin embargo, todos nuestros servicios son 100% online — atendemos clientes sin importar su ubicación, con especial enfoque en latinos en USA y Latinoamérica.</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Para quién está dirigido este servicio? <span class="ficon">▼</span></div><div class="fa">Ideal para: <strong>Creadores de contenido</strong> que buscan más alcance · <strong>Negocios locales</strong> (restaurantes, salones, gimnasios) que quieren más clientes · <strong>Tiendas online</strong> que necesitan más exposición · <strong>Artistas y talentos emergentes</strong> que construyen su comunidad.<br><br>Si quieres destacar en redes sociales y aumentar tu presencia digital, ¡este servicio es para ti!</div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">¿Cómo funciona el pago y la política de reembolso? <span class="ficon">▼</span></div><div class="fa">Aceptamos: Tarjeta crédito/débito (pago directo en la web), Zelle, PayPal, Criptomonedas, Bancolombia, Banesco Panamá y Pago Móvil Venezuela.<br><br>No ofrecemos reembolsos una vez iniciado el servicio, salvo casos de incumplimiento evidente de nuestra parte. Si tienes problemas durante el período de garantía, hacemos recarga sin costo adicional.</div></div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+<div class="container">
+  <div class="slabel">Contacto</div>
+  <h2 class="stitle">HABLEMOS AHORA</h2>
+  <p class="ssub">¿Tienes dudas o necesitas asesoría personalizada? Te respondemos en minutos.</p>
+  <div class="cgrid2">
+    <div class="cinfo">
+      <div class="citem"><div class="cion">💬</div><div><div class="clb">WhatsApp</div><a href="https://wa.me/18325163196" target="_blank" class="cvl">+1 (832) 516-3196</a></div></div>
+      <div class="citem"><div class="cion">📸</div><div><div class="clb">Instagram Principal</div><a href="https://instagram.com/difundetumarca.ahora" target="_blank" class="cvl">@difundetumarca.ahora</a></div></div>
+      <div class="citem"><div class="cion">📱</div><div><div class="clb">Cuentas de Soporte</div><div style="font-size:12px;color:var(--muted);line-height:1.8;margin-top:2px">@marcaexitosa.usa · @marketingideal.esp · @impulsolatino.usa</div></div></div>
+      <div class="citem"><div class="cion">✉️</div><div><div class="clb">Email</div><a href="mailto:Atencion@worldkloxagency.com" class="cvl" style="font-size:13px">Atencion@worldkloxagency.com</a></div></div>
+      <a href="https://wa.me/18325163196" target="_blank" class="btn-p" style="text-decoration:none;justify-content:center">💬 Escríbenos por WhatsApp</a>
+    </div>
+    <div class="cform">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:24px;margin-bottom:18px">ENVÍANOS UN MENSAJE</h3>
+      <div class="fg2"><label>Tu Nombre</label><input type="text" id="cfn" placeholder="Ej: María López"></div>
+      <div class="fg2"><label>WhatsApp o Email</label><input type="text" id="cfc" placeholder="Ej: +1 555 123 4567"></div>
+      <div class="fg2"><label>Red Social</label><select id="cfr"><option value="">Selecciona...</option><option>Instagram</option><option>TikTok</option><option>YouTube</option><option>Facebook</option><option>Twitter/X</option><option>Varias redes</option></select></div>
+      <div class="fg2"><label>¿En qué te podemos ayudar?</label><textarea id="cfm" placeholder="Cuéntanos tu nicho, seguidores actuales y qué quieres lograr..."></textarea></div>
+      <button class="btn-p" style="width:100%;justify-content:center" onclick="submitContact()">Enviar Mensaje 🚀</button>
+      <p id="cfok" style="display:none;text-align:center;color:#00d68f;font-weight:600;margin-top:10px">✅ ¡Mensaje enviado! Te contactamos pronto.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--bg2);border-top:1px solid rgba(255,255,255,.04);padding:44px 40px 22px">
+  <div class="fgrid">
+    <div><a href="#" class="logo" style="display:block;margin-bottom:10px">VIRALIZAME</a><p class="fdesc">Crecimiento latino real para Instagram, TikTok, YouTube, Facebook y Twitter/X. Sin contraseña. 100% seguro y garantizado.</p><div style="margin-top:14px;display:flex;gap:12px"><a href="https://wa.me/18325163196" target="_blank" style="color:#25d366;font-size:22px;text-decoration:none">💬</a><a href="https://instagram.com/difundetumarca.ahora" target="_blank" style="color:var(--pink);font-size:22px;text-decoration:none">📸</a></div></div>
+    <div class="fcol"><h4>Servicios</h4><div class="flinks"><a href="#servicios">Instagram</a><a href="#servicios">TikTok</a><a href="#servicios">YouTube</a><a href="#servicios">Facebook</a><a href="#servicios">Twitter/X</a><a href="#servicios">Autolikes/Views</a></div></div>
+    <div class="fcol"><h4>Empresa</h4><div class="flinks"><a href="#promox2">Promo X2</a><a href="#planes">Planes Mensuales</a><a href="#referidos">Referidos</a><a href="#ia">Asistente IA</a><a href="#faq">FAQ</a></div></div>
+    <div class="fcol"><h4>Contacto</h4><div class="flinks"><a href="https://wa.me/18325163196" target="_blank">WhatsApp</a><a href="https://instagram.com/difundetumarca.ahora" target="_blank">@difundetumarca.ahora</a><a href="https://instagram.com/marcaexitosa.usa" target="_blank">@marcaexitosa.usa</a><a href="https://instagram.com/marketingideal.esp" target="_blank">@marketingideal.esp</a><a href="https://instagram.com/impulsolatino.usa" target="_blank">@impulsolatino.usa</a><a href="mailto:Atencion@worldkloxagency.com">Email Soporte</a></div></div>
+  </div>
+  <div class="fbot"><p>© 2025 Viralizame. Todos los derechos reservados.</p><p>WA: <a href="https://wa.me/18325163196" style="color:var(--pink);text-decoration:none">+1 (832) 516-3196</a></p></div>
+</footer>
+
+<a href="https://wa.me/18325163196" target="_blank" class="wa-float" title="WhatsApp Soporte">💬</a>
+
+<!-- ORDER MODAL -->
+<div class="moverlay" id="moverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal" id="modal">
+    <button class="mclose" onclick="closeModal()">✕</button>
+    <div id="orderView">
+      <div class="mtitle">REALIZAR PEDIDO</div>
+      <div class="mpkg"><div class="mpname" id="mpname">Paquete</div><div class="mpdesc" id="mpdesc">Descripción</div></div>
+      <div class="mprice" id="mprice">$0.00</div>
+      <div class="ubox" id="ubox"><h4>🔥 OFERTA ESPECIAL — Solo este pedido</h4><p id="utxt">Añade Autolikes por solo $9.99 adicionales — activación inmediata.</p><button class="buyes" onclick="doUpsell()">✅ Sí, añadir Autolikes $9.99</button></div>
+      <div class="dbox" id="dbox"><h4>💙 ¿Presupuesto ajustado?</h4><p>Cuéntanos por WhatsApp y te armamos un plan a tu medida.</p><a href="https://wa.me/18325163196" target="_blank" style="color:#5b8aff;font-weight:700;font-size:12px;text-decoration:none">→ Hablar por WhatsApp</a></div>
+      <div class="chkform">
+        <input type="text" id="ou" placeholder="👤 Tu usuario (Ej: @miusuario)">
+        <input type="text" id="op" placeholder="📱 Tu WhatsApp para confirmar pedido">
+        <input type="email" id="oe" placeholder="📧 Email para recibo (opcional)">
+        <div class="plybl">Método de pago:</div>
+        <div class="payog">
+          <div class="payo" onclick="selPay(this,'💳 Tarjeta')"><span class="pico">💳</span>Tarjeta</div>
+          <div class="payo" onclick="selPay(this,'💰 Zelle')"><span class="pico">💰</span>Zelle</div>
+          <div class="payo" onclick="selPay(this,'₿ Crypto')"><span class="pico">₿</span>Crypto</div>
+          <div class="payo" onclick="selPay(this,'🅿️ PayPal')"><span class="pico">🅿️</span>PayPal</div>
+          <div class="payo" onclick="selPay(this,'🏦 Bancolombia')"><span class="pico">🏦</span>Bancolombia</div>
+          <div class="payo" onclick="selPay(this,'🏛️ Banesco')"><span class="pico">🏛️</span>Banesco</div>
+          <div class="payo" onclick="selPay(this,'📱 Pago Móvil')"><span class="pico">📱</span>Pago Móvil</div>
+          <div class="payo" onclick="selPay(this,'💵 Efectivo')"><span class="pico">💵</span>Otro</div>
+        </div>
+        <input type="text" id="on" placeholder="📝 Notas / posts específicos (opcional)">
+        <button class="border" id="btnOrder" onclick="submitOrder()">🚀 Confirmar Pedido Ahora</button>
+        <div class="secnote">🔒 Pago 100% seguro · Sin contraseña · Activación en horas</div>
+      </div>
+    </div>
+    <div class="sucview" id="sucview">
+      <div style="font-size:56px;margin-bottom:14px">🎉</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:34px;color:#00d68f;margin-bottom:8px">¡PEDIDO RECIBIDO!</h2>
+      <p style="color:rgba(255,255,255,.7);font-size:15px;line-height:1.7">Tu pedido fue enviado. Recibirás instrucciones de pago y confirmación en tu WhatsApp en minutos.<br><br><strong style="color:#fff">WhatsApp: +1 (832) 516-3196</strong></p>
+      <a href="https://wa.me/18325163196" target="_blank" class="btn-p" style="margin-top:22px;text-decoration:none;display:flex;justify-content:center;width:100%">💬 Ir al WhatsApp Ahora</a>
+    </div>
+  </div>
+</div>
+
+<script>
+let pkg={name:'',price:'',desc:''};
+let payMethod='';
+let upsellOn=false;
+
+// Platform tabs
+function showP(id,btn){
+  document.querySelectorAll('[id^="p-"]').forEach(el=>el.style.display='none');
+  document.querySelectorAll('.ptab').forEach(el=>el.classList.remove('active'));
+  document.getElementById('p-'+id).style.display='block';
+  btn.classList.add('active');
+}
+
+// Sub tabs
+function showSub(id,btn){
+  ['3m','6m','12m'].forEach(k=>{const el=document.getElementById('sub-'+k);if(el)el.style.display='none';});
+  document.querySelectorAll('.stab').forEach(el=>el.classList.remove('active'));
+  document.getElementById('sub-'+id).style.display='grid';
+  btn.classList.add('active');
+}
+
+// FAQ
+function tf(el){
+  const item=el.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.fi').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});document.getElementById('navLinks').classList.remove('open');}
+  });
+});
+
+// AI Chat
+const aiResp=txt=>{
+  const low=txt.toLowerCase();
+  const num=parseInt(txt.replace(/[^0-9]/g,''))||0;
+  if(low.includes('gratis')||low.includes('probar')||num<25)return'🎁 ¡Genial! Ofrecemos <strong>50 seguidores latinos GRATIS</strong> sin compromiso. Solo escríbenos por <a href="https://wa.me/18325163196" target="_blank" style="color:var(--pink);font-weight:700">WhatsApp</a> con tu usuario y te los enviamos. ¡Sin tarjeta ni contraseña!';
+  if((low.includes('instagram')||low.includes('ig'))&&num<1000)return`Con ${num||'pocos'} seguidores en Instagram, te recomiendo empezar con <strong>1,000 Seg. Latinos $34.99</strong> + Autolikes $24.99. Total $59.98. Los autolikes harán explotar tu engagement inmediatamente. ¿Lo activamos?`;
+  if((low.includes('instagram')||low.includes('ig'))&&num<5000)return`Con ${num} seguidores en IG, el siguiente nivel es <strong>4,000 Seg. Latinos $84.99</strong> + Autolikes 6K $34.99 = $119.98 total. Te catapultará a micro-influencer reconocido. ¿Te interesa?`;
+  if(low.includes('instagram')||low.includes('ig'))return`Con ${num} seguidores estás listo para el gran salto. Te recomiendo la <strong>Promo X2 $79.99</strong> — 4,000 seg en Instagram Y otra red a la vez. El mejor ROI disponible. ¿Qué segunda red usas?`;
+  if(low.includes('tiktok'))return`Para TikTok con ${num||'tu cuenta'}, recomiendo <strong>1,000 Seg. Latinos TikTok $39.99</strong> + 25K Views $24.99 = $64.98. El algoritmo de TikTok premia el engagement. ¿Lo activamos?`;
+  if(low.includes('youtube'))return`Para YouTube: <strong>1,000 Suscriptores $79.99</strong> + 10K Views $44.99. Si buscas monetización, el pack de <strong>4,000 Horas Watchtime $379.99</strong> es esencial. ¿Cuál es tu objetivo?`;
+  if(low.includes('fitness')||low.includes('gym'))return`Para fitness, lo que más funciona: <strong>1,000 Seg. Latinos $34.99</strong> + Autolikes 6K $34.99 = $69.98. Las marcas de suplementos buscan cuentas con engagement real. ¿Lo activamos?`;
+  if(low.includes('negocio')||low.includes('empresa')||low.includes('restaurante'))return`Para negocios locales, los <strong>Seg. Latinos 100% Reales</strong> son perfectos — son clientes potenciales reales. 1,000 Reales $69.99 + Engagement Pack 2 $44.99 = $114.98 para máximo impacto local.`;
+  if(low.includes('moda')||low.includes('fashion'))return`¡Nicho de moda! Te recomiendo <strong>2,000 Seg. Latinos $49.99</strong> + Autoviews $24.99 para tus reels de outfits. Total $74.98. Las marcas de moda pagan muy bien a micro-influencers con audiencia latina. 🔥`;
+  return`¡Gracias! Para darte la estrategia más precisa, escríbenos por <a href="https://wa.me/18325163196" target="_blank" style="color:var(--pink);font-weight:700">WhatsApp +1 (832) 516-3196</a> y te asesoramos en tiempo real con un plan personalizado. 🚀`;
+};
+
+function sendMsg(){
+  const inp=document.getElementById('chatInput');
+  const val=inp.value.trim();
+  if(!val)return;
+  const msgs=document.getElementById('chatMsgs');
+  const um=document.createElement('div');um.className='msg u';um.textContent=val;msgs.appendChild(um);
+  inp.value='';msgs.scrollTop=msgs.scrollHeight;
+  setTimeout(()=>{
+    const bm=document.createElement('div');bm.className='msg b';bm.innerHTML=aiResp(val);msgs.appendChild(bm);msgs.scrollTop=msgs.scrollHeight;
+  },800);
+}
+
+// Modal
+function openModal(name,price,desc){
+  pkg={name,price,desc};upsellOn=false;payMethod='';
+  document.getElementById('mpname').textContent=name;
+  document.getElementById('mpdesc').textContent=desc;
+  document.getElementById('mprice').textContent=price;
+  document.getElementById('ou').value='';document.getElementById('op').value='';
+  document.getElementById('oe').value='';document.getElementById('on').value='';
+  document.querySelectorAll('.payo').forEach(el=>el.classList.remove('sel'));
+  document.getElementById('dbox').style.display='none';
+  document.getElementById('sucview').classList.remove('show');
+  document.getElementById('orderView').style.display='block';
+  const isAuto=name.toLowerCase().includes('auto')||name.toLowerCase().includes('referido')||name.toLowerCase().includes('gratis');
+  document.getElementById('ubox').style.display=isAuto?'none':'block';
+  document.getElementById('moverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('moverlay').classList.remove('open');document.body.style.overflow='';}
+
+function selPay(el,m){
+  document.querySelectorAll('.payo').forEach(p=>p.classList.remove('sel'));
+  el.classList.add('sel');payMethod=m;
+  document.getElementById('dbox').style.display=(!m.includes('Tarjeta')&&!m.includes('PayPal'))?'block':'none';
+}
+
+function doUpsell(){
+  upsellOn=true;
+  document.getElementById('ubox').innerHTML='<h4 style="color:#00d68f">✅ Autolikes añadidos (+$9.99)</h4><p style="color:var(--muted);font-size:12px">Se agregarán $9.99 al total de tu pedido.</p>';
+}
+
+function submitOrder(){
+  const user=document.getElementById('ou').value.trim();
+  const phone=document.getElementById('op').value.trim();
+  if(!user||!phone){alert('Por favor ingresa tu usuario y número de WhatsApp');return;}
+  if(!payMethod){alert('Por favor selecciona un método de pago');return;}
+  const btn=document.getElementById('btnOrder');
+  btn.textContent='⏳ Enviando...';btn.disabled=true;
+  const ups=upsellOn?' + Autolikes $9.99':'';
+  const notes=document.getElementById('on').value.trim();
+  const email=document.getElementById('oe').value.trim();
+  const msg=`🚀 *NUEVO PEDIDO — VIRALIZAME*\n\n📦 *Paquete:* ${pkg.name}${ups}\n💰 *Precio:* ${pkg.price}${upsellOn?' + $9.99 autolikes':''}\n📝 *Incluye:* ${pkg.desc}\n\n👤 *Usuario:* ${user}\n📞 *WhatsApp cliente:* ${phone}${email?'\n📧 Email: '+email:''}\n💳 *Método de pago:* ${payMethod}\n📝 *Notas:* ${notes||'Ninguna'}\n\n✅ *Cliente listo para pagar. Procesar pedido.*`;
+  window.open(`https://wa.me/18325163196?text=${encodeURIComponent(msg)}`,'_blank');
+  document.getElementById('orderView').style.display='none';
+  document.getElementById('sucview').classList.add('show');
+  btn.textContent='🚀 Confirmar Pedido Ahora';btn.disabled=false;
+}
+
+function submitContact(){
+  const n=document.getElementById('cfn').value.trim();
+  const c=document.getElementById('cfc').value.trim();
+  if(!n||!c){alert('Por favor completa los campos requeridos');return;}
+  const r=document.getElementById('cfr').value;
+  const m=document.getElementById('cfm').value.trim();
+  const msg=`💬 *CONSULTA VIRALIZAME*\n\n👤 *Nombre:* ${n}\n📞 *Contacto:* ${c}\n📱 *Red Social:* ${r||'No especificada'}\n📝 *Mensaje:* ${m||'Sin mensaje adicional'}`;
+  window.open(`https://wa.me/18325163196?text=${encodeURIComponent(msg)}`,'_blank');
+  document.getElementById('cfok').style.display='block';
+  document.getElementById('cfn').value='';document.getElementById('cfc').value='';document.getElementById('cfm').value='';
+}
+</script>
+</body>
+</html>
