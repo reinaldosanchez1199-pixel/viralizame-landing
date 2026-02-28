@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://viralizame.com/sitemap.xml
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
