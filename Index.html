@@ -1418,4 +1418,14 @@ function handleChatImage(input){
       const msgs=document.getElementById('chatMsgs');
       const preview=document.createElement('div');preview.className='msg u';
       const imgEl=document.createElement('img');imgEl.src=compressed;imgEl.className='msg-img-preview';
-      const txt=docu
+      const txt=document.createElement('p');txt.style.marginTop='6px';txt.style.fontSize='12px';txt.textContent='📷 Analizando tu perfil con IA...';
+      preview.appendChild(imgEl);preview.appendChild(txt);msgs.appendChild(preview);msgs.scrollTop=msgs.scrollHeight;
+      setTimeout(sendMsg,300);
+    };
+    img.src=e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+</script>
+</body>
+</html>
