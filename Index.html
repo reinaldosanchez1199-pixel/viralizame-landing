@@ -1340,9 +1340,9 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
         </div>
         <!-- COMPROBANTE -->
         <div class="comp-section" id="compSection">
-          <div style="background:linear-gradient(135deg,rgba(37,211,102,.08),rgba(37,211,102,.04));border:1px solid rgba(37,211,102,.25);border-radius:12px;padding:14px 16px;margin:8px 0">
-            <div style="font-size:13px;font-weight:700;color:#25d366;margin-bottom:6px">📸 ¿Cómo enviar tu comprobante?</div>
-            <p style="color:rgba(255,255,255,.7);font-size:12px;line-height:1.7;margin:0">Al hacer clic en <strong style="color:#fff">Confirmar Pedido</strong>, se abrirá WhatsApp con los datos. Una vez ahí, <strong style="color:#fff">adjunta la foto del comprobante</strong> en el mismo chat antes de enviar. Es el paso final 👇</p>
+          <div style="background:rgba(255,193,7,.07);border:1px solid rgba(255,193,7,.2);border-radius:12px;padding:12px 14px;margin:8px 0">
+            <div style="font-size:12px;font-weight:700;color:#ffc107;margin-bottom:4px">⚠️ Recuerda</div>
+            <p style="color:rgba(255,255,255,.65);font-size:12px;line-height:1.6;margin:0">Después de confirmar, te pediremos enviar la foto del comprobante por WhatsApp en un segundo paso. Es fácil 👌</p>
           </div>
         </div>
         <!-- GENDER SELECTOR -->
@@ -1361,18 +1361,24 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
       </div>
     </div>
     <div class="sucview" id="sucview">
-      <div style="font-size:48px;margin-bottom:10px">✅</div>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:#00d68f;margin-bottom:8px">¡PEDIDO ENVIADO!</h2>
-      <div style="background:linear-gradient(135deg,rgba(37,211,102,.1),rgba(37,211,102,.04));border:1px solid rgba(37,211,102,.3);border-radius:14px;padding:16px;margin:12px 0;text-align:left">
-        <div style="font-weight:700;color:#25d366;font-size:13px;margin-bottom:8px">📸 PASO FINAL — Envía tu comprobante:</div>
-        <ol style="color:rgba(255,255,255,.8);font-size:13px;line-height:2;padding-left:18px;margin:0">
-          <li>Se abrió WhatsApp con los datos de tu pedido</li>
-          <li><strong style="color:#fff">Adjunta la foto</strong> del comprobante en ese chat 📎</li>
-          <li>Envía el mensaje — ¡listo! Activamos tu pedido</li>
-        </ol>
+      <!-- PASO 1 completado -->
+      <div style="display:flex;align-items:center;gap:10px;background:rgba(0,214,143,.08);border:1px solid rgba(0,214,143,.2);border-radius:12px;padding:12px 16px;margin-bottom:16px">
+        <div style="width:28px;height:28px;background:#00d68f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:#000;flex-shrink:0">1</div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#00d68f">✅ Datos del pedido enviados</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">WhatsApp recibió los detalles de tu pedido</div>
+        </div>
       </div>
-      <a href="https://wa.me/18325163196" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#000;font-weight:800;padding:13px;border-radius:12px;text-decoration:none;font-size:14px;margin-top:4px">💬 Abrir WhatsApp y adjuntar comprobante →</a>
-      <p style="color:var(--muted);font-size:11px;margin-top:10px">+1 (832) 516-3196 · Confirmación inmediata</p>
+      <!-- PASO 2 -->
+      <div style="background:linear-gradient(135deg,rgba(37,211,102,.12),rgba(37,211,102,.05));border:2px solid #25d366;border-radius:14px;padding:20px;margin-bottom:16px;text-align:center">
+        <div style="font-size:36px;margin-bottom:8px">📸</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:6px">Ahora envía tu comprobante</div>
+        <p style="color:rgba(255,255,255,.7);font-size:13px;line-height:1.6;margin-bottom:16px">Toca el botón de abajo → se abre WhatsApp → adjunta la foto de tu comprobante → envía. ¡Listo!</p>
+        <a id="btnComprobante" href="https://wa.me/18325163196?text=Hola%2C+aqu%C3%AD+te+env%C3%ADo+mi+comprobante+de+pago+%F0%9F%91%87" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#000;font-weight:900;padding:15px;border-radius:12px;text-decoration:none;font-size:15px">
+          📎 Enviar comprobante por WhatsApp
+        </a>
+      </div>
+      <p style="color:var(--muted);font-size:11px;text-align:center">Activamos tu pedido en cuanto recibamos el comprobante · +1 (832) 516-3196</p>
     </div>
   </div>
 </div>
@@ -1548,7 +1554,7 @@ function submitOrder(){
   }
 
   const ups=upsellOn?' + Autolikes $9.99':'';
-  const genderInfo=pkg.hasGender&&selectedGender!=='mixto'?`\n👥 *Género:* ${selectedGender==='femenino'?'👩 Solo Femenino':'👨 Solo Masculino'}`:'';const msg=`🚀 *PEDIDO VIRALIZAME — ${payMethod}*\n\n📦 *Paquete:* ${pkg.name}${ups}\n💰 *Precio:* ${pkg.price}\n📝 *Incluye:* ${pkg.desc}${genderInfo}\n\n👤 *Usuario:* ${user}\n📞 *WhatsApp:* ${phone}\n💳 *Método:* ${payMethod}\n📝 *Notas:* ${document.getElementById('on').value||'Ninguna'}\n\n📎 *IMPORTANTE: Adjunta el comprobante de pago en este mismo chat antes de enviar.*`;
+  const genderInfo=pkg.hasGender&&selectedGender!=='mixto'?`\n👥 *Género:* ${selectedGender==='femenino'?'👩 Solo Femenino':'👨 Solo Masculino'}`:'';const msg=`🚀 *PEDIDO VIRALIZAME — ${payMethod}*\n\n📦 *Paquete:* ${pkg.name}${ups}\n💰 *Precio:* ${pkg.price}\n📝 *Incluye:* ${pkg.desc}${genderInfo}\n\n👤 *Usuario:* ${user}\n📞 *WhatsApp:* ${phone}\n💳 *Método:* ${payMethod}\n📝 *Notas:* ${document.getElementById('on').value||'Ninguna'}\n\n⏳ *En un momento te enviamos el siguiente paso para confirmar tu comprobante.*`;
   window.open(`https://wa.me/18325163196?text=${encodeURIComponent(msg)}`,'_blank');
   showSuccess();
 }
