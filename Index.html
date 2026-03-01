@@ -1311,7 +1311,7 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
       <div class="ubox" id="ubox"><h4>🔥 OFERTA ESPECIAL — Solo este pedido</h4><p>Añade Autolikes por solo $9.99 adicionales — activación inmediata.</p><button class="buyes" onclick="doUpsell()">✅ Sí, añadir Autolikes $9.99</button></div>
       <div class="chkform">
         <input type="text" id="ou" placeholder="👤 Tu usuario (Ej: @miusuario)">
-        <input type="text" id="op" placeholder="📱 Tu WhatsApp para confirmar pedido">
+        <input type="text" id="op" placeholder="📱 WhatsApp con código de país (Ej: +1 832 516 3196)">
         <input type="email" id="oe" placeholder="📧 Email (opcional)">
         <div class="plybl">Método de pago:</div>
         <div class="payog">
@@ -1340,12 +1340,10 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
         </div>
         <!-- COMPROBANTE -->
         <div class="comp-section" id="compSection">
-          <div class="plybl" style="margin-top:8px">Sube tu comprobante de pago:</div>
-          <div class="comp-upload" onclick="document.getElementById('compInput').click()">
-            <div id="compText">📎 Clic para subir imagen del comprobante</div>
-            <img id="compPreview" class="comp-preview">
+          <div style="background:linear-gradient(135deg,rgba(37,211,102,.08),rgba(37,211,102,.04));border:1px solid rgba(37,211,102,.25);border-radius:12px;padding:14px 16px;margin:8px 0">
+            <div style="font-size:13px;font-weight:700;color:#25d366;margin-bottom:6px">📸 ¿Cómo enviar tu comprobante?</div>
+            <p style="color:rgba(255,255,255,.7);font-size:12px;line-height:1.7;margin:0">Al hacer clic en <strong style="color:#fff">Confirmar Pedido</strong>, se abrirá WhatsApp con los datos. Una vez ahí, <strong style="color:#fff">adjunta la foto del comprobante</strong> en el mismo chat antes de enviar. Es el paso final 👇</p>
           </div>
-          <input type="file" id="compInput" accept="image/*" style="display:none" onchange="handleComp(this)">
         </div>
         <!-- GENDER SELECTOR -->
         <div id="genderSection" style="display:none">
@@ -1363,10 +1361,18 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
       </div>
     </div>
     <div class="sucview" id="sucview">
-      <div style="font-size:56px;margin-bottom:14px">🎉</div>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:34px;color:#00d68f;margin-bottom:8px">¡PEDIDO RECIBIDO!</h2>
-      <p style="color:rgba(255,255,255,.7);font-size:15px;line-height:1.7">Tu pedido fue enviado. Recibirás confirmación en tu WhatsApp en minutos.<br><br><strong style="color:#fff">WhatsApp: +1 (832) 516-3196</strong></p>
-      <a href="https://wa.me/18325163196" target="_blank" class="btn-p" style="margin-top:22px;text-decoration:none;display:flex;justify-content:center;width:100%">💬 Ir al WhatsApp</a>
+      <div style="font-size:48px;margin-bottom:10px">✅</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:#00d68f;margin-bottom:8px">¡PEDIDO ENVIADO!</h2>
+      <div style="background:linear-gradient(135deg,rgba(37,211,102,.1),rgba(37,211,102,.04));border:1px solid rgba(37,211,102,.3);border-radius:14px;padding:16px;margin:12px 0;text-align:left">
+        <div style="font-weight:700;color:#25d366;font-size:13px;margin-bottom:8px">📸 PASO FINAL — Envía tu comprobante:</div>
+        <ol style="color:rgba(255,255,255,.8);font-size:13px;line-height:2;padding-left:18px;margin:0">
+          <li>Se abrió WhatsApp con los datos de tu pedido</li>
+          <li><strong style="color:#fff">Adjunta la foto</strong> del comprobante en ese chat 📎</li>
+          <li>Envía el mensaje — ¡listo! Activamos tu pedido</li>
+        </ol>
+      </div>
+      <a href="https://wa.me/18325163196" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#000;font-weight:800;padding:13px;border-radius:12px;text-decoration:none;font-size:14px;margin-top:4px">💬 Abrir WhatsApp y adjuntar comprobante →</a>
+      <p style="color:var(--muted);font-size:11px;margin-top:10px">+1 (832) 516-3196 · Confirmación inmediata</p>
     </div>
   </div>
 </div>
@@ -1425,7 +1431,7 @@ const paymentData = {
   '₿ Binance':{title:'₿ Datos Binance',rows:[['Binance ID','63987705']],warn:''}
 };
 
-let pkg={name:'',price:'',desc:'',amount:'',isPlan:false,hasGender:false}, payMethod='', upsellOn=false, compFile=null, selectedGender='mixto';
+let pkg={name:'',price:'',desc:'',amount:'',isPlan:false,hasGender:false}, payMethod='', upsellOn=false, selectedGender='mixto';
 
 function showP(id,btn){
   document.querySelectorAll('[id^="p-"]').forEach(el=>el.style.display='none');
@@ -1455,7 +1461,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 function openModal(name,price,desc,amount,type,genderFlag){
   const hasGender=genderFlag==='gender';
   pkg={name,price,desc,amount:amount||'',isPlan:type==='plan',hasGender};
-  upsellOn=false;payMethod='';compFile=null;selectedGender='mixto';
+  upsellOn=false;payMethod='';selectedGender='mixto';
   document.getElementById('mpname').textContent=name;
   document.getElementById('mpdesc').textContent=desc;
   document.getElementById('mprice').textContent=price;
@@ -1465,8 +1471,6 @@ function openModal(name,price,desc,amount,type,genderFlag){
   document.getElementById('cardWaBox').classList.remove('show');
   document.getElementById('payInfoBox').classList.remove('show');
   document.getElementById('compSection').classList.remove('show');
-  document.getElementById('compPreview').style.display='none';
-  document.getElementById('compText').textContent='📎 Clic para subir imagen del comprobante';
   document.getElementById('sucview').classList.remove('show');
   document.getElementById('orderView').style.display='block';
   // Gender selector
@@ -1524,17 +1528,7 @@ function selPay(el,m){
 }
 
 function doUpsell(){upsellOn=true;document.getElementById('ubox').innerHTML='<h4 style="color:#00d68f">✅ Autolikes añadidos (+$9.99)</h4>';}
-function handleComp(input){
-  if(!input.files[0])return;
-  compFile=input.files[0];
-  const reader=new FileReader();
-  reader.onload=e=>{
-    const prev=document.getElementById('compPreview');
-    prev.src=e.target.result;prev.style.display='block';
-    document.getElementById('compText').textContent='✅ Comprobante cargado';
-  };
-  reader.readAsDataURL(compFile);
-}
+// comprobante now sent directly via WhatsApp - no upload needed
 
 function submitOrder(){
   const user=document.getElementById('ou').value.trim();
@@ -1553,9 +1547,8 @@ function submitOrder(){
     return;
   }
 
-  if(!compFile){alert('Por favor sube el comprobante de pago');return;}
   const ups=upsellOn?' + Autolikes $9.99':'';
-  const genderInfo=pkg.hasGender&&selectedGender!=='mixto'?`\n👥 *Género:* ${selectedGender==='femenino'?'👩 Solo Femenino':'👨 Solo Masculino'}`:'';const msg=`🚀 *PEDIDO VIRALIZAME — ${payMethod}*\n\n📦 *Paquete:* ${pkg.name}${ups}\n💰 *Precio:* ${pkg.price}\n📝 *Incluye:* ${pkg.desc}${genderInfo}\n\n👤 *Usuario:* ${user}\n📞 *WhatsApp:* ${phone}\n💳 *Método:* ${payMethod}\n📝 *Notas:* ${document.getElementById('on').value||'Ninguna'}\n\n📎 *Comprobante adjunto en el siguiente mensaje.*`;
+  const genderInfo=pkg.hasGender&&selectedGender!=='mixto'?`\n👥 *Género:* ${selectedGender==='femenino'?'👩 Solo Femenino':'👨 Solo Masculino'}`:'';const msg=`🚀 *PEDIDO VIRALIZAME — ${payMethod}*\n\n📦 *Paquete:* ${pkg.name}${ups}\n💰 *Precio:* ${pkg.price}\n📝 *Incluye:* ${pkg.desc}${genderInfo}\n\n👤 *Usuario:* ${user}\n📞 *WhatsApp:* ${phone}\n💳 *Método:* ${payMethod}\n📝 *Notas:* ${document.getElementById('on').value||'Ninguna'}\n\n📎 *IMPORTANTE: Adjunta el comprobante de pago en este mismo chat antes de enviar.*`;
   window.open(`https://wa.me/18325163196?text=${encodeURIComponent(msg)}`,'_blank');
   showSuccess();
 }
