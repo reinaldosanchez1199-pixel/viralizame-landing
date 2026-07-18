@@ -2071,7 +2071,7 @@ function handleChatImage(input){
 <!-- SELECTOR DE MONEDA COP -->
 <button id="curBtn" onclick="toggleCur()" style="position:fixed;bottom:26px;left:18px;z-index:998;background:rgba(12,12,26,.95);border:1px solid rgba(245,197,24,.4);color:var(--gold);font-weight:800;font-size:12px;padding:11px 16px;border-radius:50px;cursor:pointer;font-family:'Outfit',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,.5);backdrop-filter:blur(10px)">🇨🇴 Ver precios en COP</button>
 <script>
-const COP_RATE=3300, COP_DISC=.8;
+const COP_RATE=3300, COP_DISC=.7;
 let cur='USD';
 const copVal=u=>Math.max(1,Math.round(u*COP_DISC*COP_RATE/1000))*1000-100;
 const fmtCop=v=>'$'+v.toLocaleString('es-CO');
