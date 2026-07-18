@@ -2067,5 +2067,54 @@ function handleChatImage(input){
   reader.readAsDataURL(file);
 }
 </script>
+
+<!-- SELECTOR DE MONEDA COP -->
+<button id="curBtn" onclick="toggleCur()" style="position:fixed;bottom:26px;left:18px;z-index:998;background:rgba(12,12,26,.95);border:1px solid rgba(245,197,24,.4);color:var(--gold);font-weight:800;font-size:12px;padding:11px 16px;border-radius:50px;cursor:pointer;font-family:'Outfit',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,.5);backdrop-filter:blur(10px)">🇨🇴 Ver precios en COP</button>
+<script>
+const COP_RATE=3300, COP_DISC=.8;
+let cur='USD';
+const copVal=u=>Math.max(1,Math.round(u*COP_DISC*COP_RATE/1000))*1000-100;
+const fmtCop=v=>'$'+v.toLocaleString('es-CO');
+const PRICE_RE=/^\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?(?:\/mes)?$/;
+let priceEls=null;
+function collectPrices(){
+  priceEls=[];
+  document.querySelectorAll('body *').forEach(el=>{
+    if(el.children.length===0 && el.id!=='curBtn'){
+      const t=el.textContent.trim();
+      if(PRICE_RE.test(t)){
+        const usd=parseFloat(t.replace(/[^\d.]/g,''));
+        if(usd>=5){priceEls.push({el,usd,orig:t,mes:t.includes('/mes')});}
+      }
+    }
+  });
+}
+function toggleCur(){
+  if(!priceEls)collectPrices();
+  cur=cur==='USD'?'COP':'USD';
+  priceEls.forEach(p=>{
+    p.el.textContent = cur==='COP' ? fmtCop(copVal(p.usd))+(p.mes?'/mes':'') : p.orig;
+  });
+  document.getElementById('curBtn').textContent = cur==='USD' ? '🇨🇴 Ver precios en COP' : '🇺🇸 Ver precios en USD';
+  let note=document.getElementById('copNote');
+  if(cur==='COP'){
+    if(!note){
+      note=document.createElement('div');note.id='copNote';
+      note.style.cssText='position:fixed;bottom:74px;left:18px;z-index:998;background:rgba(0,214,143,.12);border:1px solid rgba(0,214,143,.3);color:#00d68f;font-size:11px;font-weight:700;padding:8px 14px;border-radius:12px;max-width:230px;line-height:1.4;font-family:Outfit,sans-serif';
+      note.textContent='🇨🇴 Precios en pesos colombianos — válido pagando por Bancolombia, Nequi o métodos locales.';
+      document.body.appendChild(note);
+    }
+  } else if(note){note.remove();}
+}
+// El modal de pedido también muestra el precio en COP cuando está activo
+const _openModalUSD=window.openModal;
+window.openModal=function(n,p,d,a,t,g){
+  if(cur==='COP'&&/^\$[\d.]+/.test(p)){
+    const usd=parseFloat(p.replace(/[^\d.]/g,''));
+    p=fmtCop(copVal(usd))+(p.includes('/mes')?'/mes':'')+' COP';
+  }
+  _openModalUSD(n,p,d,a,t,g);
+};
+</script>
 </body>
 </html>
