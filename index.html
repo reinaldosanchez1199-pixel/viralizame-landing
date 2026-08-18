@@ -527,19 +527,17 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
 
     <!-- DEMO SIN FRICCIÓN -->
     <div class="qdemo">
-      <div class="qdemo-label">🔍 Analiza tu perfil en 3 segundos</div>
+      <div class="qdemo-label">🔍 Inicia tu análisis personalizado</div>
       <div class="qdemo-row">
         <input type="text" id="qdUser" placeholder="@tu_usuario">
-        <button onclick="qdAnalyze()">Analizar Gratis →</button>
+        <button id="qdButton" onclick="qdAnalyze()">Continuar →</button>
       </div>
       <div class="qdemo-result" id="qdResult">
         <div class="qdemo-result-row"><span style="color:var(--muted)">Perfil</span><strong id="qdU2" style="color:#fff"></strong></div>
-        <div class="qdemo-result-row"><span style="color:var(--muted)">Nivel de posicionamiento actual</span><strong style="color:var(--gold)">⭐⭐☆☆☆</strong></div>
-        <div class="qdemo-result-row"><span style="color:var(--muted)">Con Viralizame (estimado)</span><strong style="color:var(--green)">⭐⭐⭐⭐☆</strong></div>
-        <div class="qdemo-result-row" style="border-bottom:none"><span style="color:var(--muted)">Paquete recomendado</span><strong style="color:var(--pink)" id="qdPkg">Combo Viral</strong></div>
-        <a href="#" id="qdWaLink" target="_blank" style="display:block;text-align:center;margin-top:12px;background:linear-gradient(90deg,#e91e8c,#7c3aed);color:#fff;padding:12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:13px">💬 Ver mi plan completo por WhatsApp</a>
+        <p style="color:rgba(255,255,255,.75);line-height:1.55;margin:12px 0 0">Para darte un diagnóstico específico necesitamos ver tu perfil. Continúa al asistente y sube una captura: la IA leerá las métricas y el contenido visibles.</p>
+        <button type="button" onclick="goToAIAnalyzer()" style="display:block;width:100%;text-align:center;margin-top:12px;background:linear-gradient(90deg,#e91e8c,#7c3aed);color:#fff;padding:12px;border-radius:10px;border:0;font-weight:800;font-size:13px;cursor:pointer">📷 Subir captura y analizar</button>
       </div>
-      <div class="qdemo-note">*Estimación orientativa basada en tu categoría y tamaño de cuenta, no un análisis en vivo de tu perfil.</div>
+      <div class="qdemo-note">Un nombre de usuario por sí solo no permite consultar las métricas del perfil.</div>
     </div>
   </div>
 </section>
@@ -578,7 +576,15 @@ function qdAnalyze(){
   if(!u){ document.getElementById('qdUser').focus(); return; }
   document.getElementById('qdU2').textContent = '@'+u;
   document.getElementById('qdResult').style.display = 'block';
-  document.getElementById('qdWaLink').href = 'https://wa.me/18325163196?text=' + encodeURIComponent(`Hola, analicé mi perfil @${u} en la web y quiero ver mi plan recomendado.`);
+  document.getElementById('qdButton').textContent = 'Perfil registrado ✓';
+}
+
+function goToAIAnalyzer(){
+  const u = document.getElementById('qdUser').value.trim().replace(/^@/,'');
+  const input = document.getElementById('chatInput');
+  if(input) input.value = `Quiero analizar el perfil @${u}. Voy a subir una captura para que puedas revisar sus datos visibles.`;
+  document.getElementById('ia').scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>document.getElementById('chatImgInput')?.click(),650);
 }
 </script>
 
@@ -2114,8 +2120,10 @@ async function callAI(messages,imgBase64=null){
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({messages,imgBase64:imgBase64||null,system:sysPrompt})
   });
-  const data=await res.json();
-  return data.reply||"Para asesoría personalizada escríbenos al WhatsApp: +1 (832) 516-3196 💬";
+  const data=await res.json().catch(()=>({}));
+  if(!res.ok) throw new Error(data.message||`Error ${res.status} al consultar Claude`);
+  if(!data.reply) throw new Error('Claude devolvió una respuesta vacía');
+  return data.reply;
 }
 
 async function sendMsg(){
@@ -2142,9 +2150,10 @@ async function sendMsg(){
     bm.innerHTML=reply.replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');
     msgs.appendChild(bm);msgs.scrollTop=msgs.scrollHeight;
   }catch(e){
+    console.error('Error del asistente:',e);
     typing.remove();
     const bm=document.createElement('div');bm.className='msg b';
-    bm.textContent='Para asesoría personalizada escríbenos al WhatsApp: +1 (832) 516-3196 💬';
+    bm.textContent=`No pude completar el análisis: ${e.message}. Inténtalo nuevamente en unos segundos.`;
     msgs.appendChild(bm);msgs.scrollTop=msgs.scrollHeight;
   }
 }

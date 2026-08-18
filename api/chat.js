@@ -6,26 +6,46 @@ export const config = {
   },
 };
 
-export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+const DEFAULT_MODEL = 'claude-haiku-4-5-20251001';
 
-  if (req.method === 'OPTIONS') return res.status(200).end();
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+function jsonError(res, status, code, message) {
+  return res.status(status).json({ error: code, message });
+}
+
+function normalizeMessages(messages) {
+  return messages.slice(-12).map((message) => ({
+    role: message.role === 'assistant' ? 'assistant' : 'user',
+    content: String(message.content || '').slice(0, 6000),
+  }));
+}
+
+export default async function handler(req, res) {
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return jsonError(res, 405, 'method_not_allowed', 'Método no permitido.');
+  }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) return res.status(500).json({ reply: 'API key no configurada.' });
+  if (!apiKey) {
+    console.error('ANTHROPIC_API_KEY is not configured');
+    return jsonError(res, 500, 'missing_api_key', 'El asistente no está configurado todavía.');
+  }
 
-  const { messages, imgBase64, system } = req.body;
-  if (!messages || !Array.isArray(messages)) return res.status(400).json({ reply: 'Error en los datos.' });
+  const { messages, imgBase64, system } = req.body || {};
+  if (!Array.isArray(messages) || messages.length === 0) {
+    return jsonError(res, 400, 'invalid_messages', 'No se recibió una conversación válida.');
+  }
 
-  const builtMessages = [];
+  const builtMessages = normalizeMessages(messages);
 
   if (imgBase64) {
-    const allButLast = messages.slice(0, -1);
-    const last = messages[messages.length - 1];
-    builtMessages.push(...allButLast);
+    if (typeof imgBase64 !== 'string' || imgBase64.length > 9_000_000) {
+      return jsonError(res, 413, 'invalid_image', 'La imagen es demasiado grande o no es válida.');
+    }
+
+    const last = builtMessages.pop();
     builtMessages.push({
       role: 'user',
       content: [
@@ -34,17 +54,15 @@ export default async function handler(req, res) {
           source: {
             type: 'base64',
             media_type: 'image/jpeg',
-            data: imgBase64
-          }
+            data: imgBase64,
+          },
         },
         {
           type: 'text',
-          text: last.content || 'Analiza este perfil de redes sociales y recomiÃ©ndame los mejores paquetes segÃºn lo que ves.'
-        }
-      ]
+          text: last?.content || 'Analiza esta captura del perfil. Describe únicamente lo que puedas observar y pide los datos que falten.',
+        },
+      ],
     });
-  } else {
-    builtMessages.push(...messages);
   }
 
   try {
@@ -53,28 +71,38 @@ export default async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01'
+        'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1024,
-        system: system || '',
-        messages: builtMessages
-      })
+        model: process.env.ANTHROPIC_MODEL || DEFAULT_MODEL,
+        max_tokens: 900,
+        system: typeof system === 'string' ? system.slice(0, 16000) : '',
+        messages: builtMessages,
+      }),
     });
 
     if (!response.ok) {
-      const err = await response.text();
-      console.error('Anthropic API error:', err);
-      return res.status(200).json({ reply: 'Para asesorÃ­a personalizada escrÃ­benos al WhatsApp: +1 (832) 516-3196 ð¬' });
+      const details = await response.text();
+      console.error('Anthropic API error', response.status, details);
+      const publicMessage = response.status === 401
+        ? 'La clave de Claude no es válida o fue revocada.'
+        : response.status === 429
+          ? 'El asistente alcanzó temporalmente su límite de uso.'
+          : response.status === 404
+            ? 'El modelo configurado no está disponible.'
+            : 'Claude no pudo procesar la solicitud.';
+      return jsonError(res, response.status, 'anthropic_error', publicMessage);
     }
 
     const data = await response.json();
-    const reply = data.content?.[0]?.text || 'Para asesorÃ­a personalizada escrÃ­benos al WhatsApp: +1 (832) 516-3196 ð¬';
-    return res.status(200).json({ reply });
+    const reply = data.content?.find((block) => block.type === 'text')?.text;
+    if (!reply) {
+      return jsonError(res, 502, 'empty_response', 'Claude devolvió una respuesta vacía.');
+    }
 
-  } catch (err) {
-    console.error('Handler error:', err);
-    return res.status(200).json({ reply: 'Para asesorÃ­a personalizada escrÃ­benos al WhatsApp: +1 (832) 516-3196 ð¬' });
+    return res.status(200).json({ reply, requestId: response.headers.get('request-id') || null });
+  } catch (error) {
+    console.error('Claude handler error', error);
+    return jsonError(res, 502, 'connection_error', 'No fue posible conectar con Claude en este momento.');
   }
 }
