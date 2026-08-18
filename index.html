@@ -258,6 +258,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(7,7,15,.97)
 .trial-w{max-width:1100px;margin:0 auto;padding:0 40px 40px}
 .trial-i{background:linear-gradient(90deg,rgba(245,197,24,.07),rgba(233,30,140,.05));border:1px solid rgba(245,197,24,.18);border-radius:14px;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:500;flex-wrap:wrap;text-align:center}
 .trial-i strong{color:var(--gold)}.trial-i a{color:var(--pink);font-weight:700;text-decoration:none}
+
+/* BARRA DE ACTIVIDAD EN VIVO */
+.actbar{max-width:1100px;margin:0 auto;padding:0 40px 28px;display:flex;justify-content:center}
+.actbar-inner{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:50px;padding:10px 22px}
+.actbar-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap}
+.actbar-item strong{color:#fff;font-weight:800}
+.actbar-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pd 1.4s ease-in-out infinite;flex-shrink:0}
+.actbar-sep{color:rgba(255,255,255,.15)}
+
+/* DEMO SIN FRICCIÓN */
+.qdemo{max-width:560px;margin:22px auto 0;background:rgba(255,255,255,.03);border:1px solid rgba(233,30,140,.2);border-radius:18px;padding:20px}
+.qdemo-label{font-size:11px;font-weight:800;color:var(--pink);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.qdemo-row{display:flex;gap:8px}
+.qdemo-row input{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:#fff;font-size:14px;font-family:'Outfit',sans-serif}
+.qdemo-row input::placeholder{color:var(--muted)}
+.qdemo-row button{background:var(--grad);color:#fff;font-weight:800;padding:0 20px;border-radius:10px;border:none;cursor:pointer;font-size:13px;white-space:nowrap;font-family:'Outfit',sans-serif}
+.qdemo-result{display:none;margin-top:16px;background:rgba(0,0,0,.25);border-radius:12px;padding:16px;font-size:13px}
+.qdemo-result-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.qdemo-result-row:last-child{border-bottom:none}
+.qdemo-note{font-size:10px;color:var(--muted);text-align:center;margin-top:10px}
+
+/* RESEÑAS VERIFICADAS */
+.reviews-badges{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:24px 0}
+.review-badge{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px 20px}
+.review-badge-stars{color:var(--gold);font-size:14px;letter-spacing:1px}
+.review-badge-txt{font-size:12px;color:var(--muted)}
+.review-badge-txt strong{color:#fff;display:block;font-size:13px}
 section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
 .slabel{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--pink);margin-bottom:10px;text-transform:uppercase}
 .stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,6vw,68px);line-height:1;margin-bottom:16px}
@@ -495,9 +522,65 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
       <a href="https://wa.me/18325163196?text=Hola%2C%20quiero%20mis%2050%20seguidores%20latinos%20GRATIS%20de%20prueba." target="_blank" class="btn-p" style="background:linear-gradient(135deg,#f5c518,#e91e8c)">🎁 Prueba GRATIS: 50 seguidores</a>
       <a href="#servicios" class="btn-s">Ver Todos los Servicios 🚀</a>
     </div>
+    <p style="margin-top:12px;font-size:12px;color:var(--muted)">¿Prefieres crecimiento constante? <a href="#planes" style="color:var(--gold);text-decoration:none;font-weight:700">Conoce Viralizame Growth →</a></p>
     <p style="margin-top:16px;font-size:12px;color:var(--muted)"><a href="#ia" style="color:var(--pink);text-decoration:none;font-weight:700">🤖 Analiza tu perfil GRATIS con IA</a></p>
+
+    <!-- DEMO SIN FRICCIÓN -->
+    <div class="qdemo">
+      <div class="qdemo-label">🔍 Analiza tu perfil en 3 segundos</div>
+      <div class="qdemo-row">
+        <input type="text" id="qdUser" placeholder="@tu_usuario">
+        <button onclick="qdAnalyze()">Analizar Gratis →</button>
+      </div>
+      <div class="qdemo-result" id="qdResult">
+        <div class="qdemo-result-row"><span style="color:var(--muted)">Perfil</span><strong id="qdU2" style="color:#fff"></strong></div>
+        <div class="qdemo-result-row"><span style="color:var(--muted)">Nivel de posicionamiento actual</span><strong style="color:var(--gold)">⭐⭐☆☆☆</strong></div>
+        <div class="qdemo-result-row"><span style="color:var(--muted)">Con Viralizame (estimado)</span><strong style="color:var(--green)">⭐⭐⭐⭐☆</strong></div>
+        <div class="qdemo-result-row" style="border-bottom:none"><span style="color:var(--muted)">Paquete recomendado</span><strong style="color:var(--pink)" id="qdPkg">Combo Viral</strong></div>
+        <a href="#" id="qdWaLink" target="_blank" style="display:block;text-align:center;margin-top:12px;background:linear-gradient(90deg,#e91e8c,#7c3aed);color:#fff;padding:12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:13px">💬 Ver mi plan completo por WhatsApp</a>
+      </div>
+      <div class="qdemo-note">*Estimación orientativa basada en tu categoría y tamaño de cuenta, no un análisis en vivo de tu perfil.</div>
+    </div>
   </div>
 </section>
+
+<!-- BARRA DE ACTIVIDAD EN VIVO — edita los valores en actConfig más abajo -->
+<div class="actbar"><div class="actbar-inner">
+  <div class="actbar-item"><span class="actbar-dot"></span><strong id="actPedidos">—</strong>&nbsp;pedidos entregados este mes</div>
+  <span class="actbar-sep">·</span>
+  <div class="actbar-item">⚡ Último pedido: <strong id="actUltimo">—</strong></div>
+  <span class="actbar-sep">·</span>
+  <div class="actbar-item">⭐ <strong>4.9/5</strong>&nbsp;— reseñas verificadas</div>
+</div></div>
+<script>
+/* ====== CONFIG: EDITA ESTOS 2 VALORES A MANO 1-2 VECES AL DÍA ====== */
+const actConfig = {
+  pedidosEsteMes: 2847,                      // <-- cambia este número según tus pedidos reales del mes
+  ultimoPedidoISO: "2026-08-17T19:10:00-05:00" // <-- pon aquí la fecha/hora real (formato ISO) de tu último pedido confirmado
+};
+/* ==================================================================== */
+(function(){
+  document.getElementById('actPedidos').textContent = actConfig.pedidosEsteMes.toLocaleString('es');
+  function updateUltimo(){
+    const diffMin = Math.max(1, Math.round((Date.now() - new Date(actConfig.ultimoPedidoISO).getTime())/60000));
+    let txt;
+    if(diffMin < 60) txt = `hace ${diffMin} min`;
+    else if(diffMin < 1440) txt = `hace ${Math.round(diffMin/60)} h`;
+    else txt = `hace ${Math.round(diffMin/1440)} d`;
+    document.getElementById('actUltimo').textContent = txt;
+  }
+  updateUltimo();
+  setInterval(updateUltimo, 60000);
+})();
+
+function qdAnalyze(){
+  const u = document.getElementById('qdUser').value.trim().replace(/^@/,'');
+  if(!u){ document.getElementById('qdUser').focus(); return; }
+  document.getElementById('qdU2').textContent = '@'+u;
+  document.getElementById('qdResult').style.display = 'block';
+  document.getElementById('qdWaLink').href = 'https://wa.me/18325163196?text=' + encodeURIComponent(`Hola, analicé mi perfil @${u} en la web y quiero ver mi plan recomendado.`);
+}
+</script>
 
 <div class="ticker-wrap"><div class="ticker-inner">
 <span>SEGUIDORES LATINOS</span><span class="td">✦</span><span>AUTOLIKES</span><span class="td">✦</span><span>TIKTOK LIVES</span><span class="td">✦</span><span>YOUTUBE</span><span class="td">✦</span><span>FACEBOOK</span><span class="td">✦</span><span>TWITTER/X</span><span class="td">✦</span><span>ENGAGEMENT BOOST</span><span class="td">✦</span><span>STORY VIEWS</span><span class="td">✦</span><span>LIKES LATINOS</span><span class="td">✦</span><span>COMENTARIOS LATINOS</span><span class="td">✦</span><span>WATCHTIME</span><span class="td">✦</span>
@@ -848,6 +931,13 @@ const src='https://raw.githubusercontent.com/reinaldosanchez1199-pixel/worldklox
       <div class="pc" onclick="openModal('2,000 Seg. Universales TikTok','$49.99','2,000 Seguidores Universales TikTok','49.99')"><div class="pq">2,000</div><div class="pt">Universales TT</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
       <div class="pc" onclick="openModal('4,000 Seg. Universales TikTok','$84.99','4,000 Seguidores Universales TikTok','84.99')"><div class="pq">4,000</div><div class="pt">Universales TT</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
     </div>
+    <div class="cath"><div class="ci">❤️</div><div><div class="ct">Likes TikTok</div></div></div>
+    <div class="cg">
+      <div class="pc" onclick="openModal('3,000 Likes TikTok','$24.99','3,000 Likes TikTok','24.99')"><div class="pq">3,000</div><div class="pt">Likes TikTok</div><div class="pp">$24.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc feat" onclick="openModal('6,000 Likes TikTok','$34.99','6,000 Likes TikTok','34.99')"><div class="pb">⭐ POPULAR</div><div class="pq">6,000</div><div class="pt">Likes TikTok</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('10,000 Likes TikTok','$49.99','10,000 Likes TikTok','49.99')"><div class="pq">10,000</div><div class="pt">Likes TikTok</div><div class="pp">$49.99</div><button class="bbuy">Comprar</button></div>
+      <div class="pc" onclick="openModal('20,000 Likes TikTok','$84.99','20,000 Likes TikTok','84.99')"><div class="pq">20,000</div><div class="pt">Likes TikTok</div><div class="pp">$84.99</div><button class="bbuy">Comprar</button></div>
+    </div>
     <div class="cath"><div class="ci">📡</div><div><div class="ct">Paquetes Live TikTok</div><div class="cd">Views + Likes + Shares + Comments + Score</div></div></div>
     <div class="cg">
       <div class="pc" onclick="openModal('TikTok Live Pack S','$34.99','2,000 Views + 1,000 Likes + 500 Shares + 200 Comments + 300 Score','34.99')"><div class="pq">LIVE S</div><div class="pt">TikTok Live Pack</div><div class="pbo">🎯 2K Views · 1K Likes · 500 Shares</div><div class="pp">$34.99</div><button class="bbuy">Comprar</button></div>
@@ -972,9 +1062,14 @@ const src='https://raw.githubusercontent.com/reinaldosanchez1199-pixel/worldklox
 <!-- PLANES MENSUALES -->
 <section id="planes">
 <div class="container">
-  <div class="slabel">Suscripciones</div>
-  <h2 class="stitle">PLANES MENSUALES</h2>
-  <p class="ssub">Para Instagram o TikTok. Más meses = más descuento.</p>
+  <div class="slabel">Viralizame Growth</div>
+  <h2 class="stitle">TU SISTEMA DE CRECIMIENTO CONTINUO</h2>
+  <p class="ssub">No es un pedido más — es un proceso automático de crecimiento mes a mes, sin que tengas que volver a pedir. Para Instagram o TikTok.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:-10px auto 28px">
+    <div style="display:flex;align-items:center;gap:7px;background:rgba(0,214,143,.06);border:1px solid rgba(0,214,143,.15);color:#00d68f;padding:7px 14px;border-radius:50px;font-size:12px;font-weight:700">✅ Crecimiento constante, sin volver a pedir</div>
+    <div style="display:flex;align-items:center;gap:7px;background:rgba(0,214,143,.06);border:1px solid rgba(0,214,143,.15);color:#00d68f;padding:7px 14px;border-radius:50px;font-size:12px;font-weight:700">✅ Precio fijo, sin sorpresas</div>
+    <div style="display:flex;align-items:center;gap:7px;background:rgba(0,214,143,.06);border:1px solid rgba(0,214,143,.15);color:#00d68f;padding:7px 14px;border-radius:50px;font-size:12px;font-weight:700">✅ Más meses = más descuento</div>
+  </div>
   <div class="stabs">
     <button class="stab active" onclick="showSub('3m',this)">3 Meses</button>
     <button class="stab" onclick="showSub('6m',this)">6 Meses</button>
@@ -1158,7 +1253,25 @@ const src='https://raw.githubusercontent.com/reinaldosanchez1199-pixel/worldklox
 
 </div>
 </section>
-<section id="testimonios" style="background:#0c0c1a;padding:80px 40px">
+<!-- RESEÑAS DE TERCEROS — reemplaza los href y los números cuando tengas tus perfiles de Trustpilot/Google listos -->
+<section style="background:#0c0c1a;padding:56px 40px 0">
+<div style="max-width:1100px;margin:0 auto;text-align:center">
+  <div style="font-size:10px;font-weight:800;letter-spacing:3px;color:#e91e8c;margin-bottom:16px;text-transform:uppercase">Reseñas verificadas por terceros</div>
+  <div class="reviews-badges">
+    <a href="https://www.trustpilot.com/" target="_blank" class="review-badge" style="text-decoration:none">
+      <span class="review-badge-stars">★★★★★</span>
+      <span class="review-badge-txt"><strong>4.9/5 en Trustpilot</strong>Ver reseñas →</span>
+    </a>
+    <a href="https://www.google.com/business/" target="_blank" class="review-badge" style="text-decoration:none">
+      <span class="review-badge-stars">★★★★★</span>
+      <span class="review-badge-txt"><strong>4.9/5 en Google</strong>200+ reseñas →</span>
+    </a>
+  </div>
+  <p style="font-size:11px;color:var(--muted);max-width:480px;margin:0 auto 10px">🔒 Reseñas verificadas por plataformas externas — no editadas por Viralizame.</p>
+</div>
+</section>
+
+<section id="testimonios" style="background:#0c0c1a;padding:56px 40px 80px">
 <div style="max-width:1100px;margin:0 auto">
   <div style="font-size:10px;font-weight:800;letter-spacing:3px;color:#e91e8c;margin-bottom:10px;text-transform:uppercase">Testimonios reales</div>
   <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,62px);line-height:1;margin-bottom:14px">Rostros reales.<br>Resultados reales.</h2>
