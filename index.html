@@ -546,29 +546,18 @@ section{padding:72px 40px}.container{max-width:1100px;margin:0 auto}
 <div class="actbar"><div class="actbar-inner">
   <div class="actbar-item"><span class="actbar-dot"></span><strong id="actPedidos">—</strong>&nbsp;pedidos entregados este mes</div>
   <span class="actbar-sep">·</span>
-  <div class="actbar-item">⚡ Último pedido: <strong id="actUltimo">—</strong></div>
+  <div class="actbar-item">⚡ <strong>Pedidos procesados diariamente</strong></div>
   <span class="actbar-sep">·</span>
   <div class="actbar-item">⭐ <strong>4.9/5</strong>&nbsp;— reseñas verificadas</div>
 </div></div>
 <script>
-/* ====== CONFIG: EDITA ESTOS 2 VALORES A MANO 1-2 VECES AL DÍA ====== */
+/* ====== CONFIG: EDITA ESTE VALOR A MANO SEGÚN SEA NECESARIO ====== */
 const actConfig = {
-  pedidosEsteMes: 2847,                      // <-- cambia este número según tus pedidos reales del mes
-  ultimoPedidoISO: "2026-08-17T19:10:00-05:00" // <-- pon aquí la fecha/hora real (formato ISO) de tu último pedido confirmado
+  pedidosEsteMes: 2847 // <-- cambia este número según tus pedidos reales del mes
 };
-/* ==================================================================== */
+/* ================================================================= */
 (function(){
   document.getElementById('actPedidos').textContent = actConfig.pedidosEsteMes.toLocaleString('es');
-  function updateUltimo(){
-    const diffMin = Math.max(1, Math.round((Date.now() - new Date(actConfig.ultimoPedidoISO).getTime())/60000));
-    let txt;
-    if(diffMin < 60) txt = `hace ${diffMin} min`;
-    else if(diffMin < 1440) txt = `hace ${Math.round(diffMin/60)} h`;
-    else txt = `hace ${Math.round(diffMin/1440)} d`;
-    document.getElementById('actUltimo').textContent = txt;
-  }
-  updateUltimo();
-  setInterval(updateUltimo, 60000);
 })();
 
 function qdAnalyze(){
