@@ -1,0 +1,71 @@
+name: Fix activity copy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-activity-copy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-activity-copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace stale last-order counter
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          old_html = '<div class="actbar-item">⚡ Último pedido: <strong id="actUltimo">—</strong></div>'
+          new_html = '<div class="actbar-item">⚡ <strong>Pedidos procesados diariamente</strong></div>'
+          if old_html not in s:
+              raise SystemExit('Activity label target not found')
+          s = s.replace(old_html, new_html, 1)
+
+          old_script = '''/* ====== CONFIG: EDITA ESTOS 2 VALORES A MANO 1-2 VECES AL DÍA ====== */
+const actConfig = {
+  pedidosEsteMes: 2847,                      // <-- cambia este número según tus pedidos reales del mes
+  ultimoPedidoISO: "2026-08-17T19:10:00-05:00" // <-- pon aquí la fecha/hora real (formato ISO) de tu último pedido confirmado
+};
+/* ==================================================================== */
+(function(){
+  document.getElementById('actPedidos').textContent = actConfig.pedidosEsteMes.toLocaleString('es');
+  function updateUltimo(){
+    const diffMin = Math.max(1, Math.round((Date.now() - new Date(actConfig.ultimoPedidoISO).getTime())/60000));
+    let txt;
+    if(diffMin < 60) txt = `hace ${diffMin} min`;
+    else if(diffMin < 1440) txt = `hace ${Math.round(diffMin/60)} h`;
+    else txt = `hace ${Math.round(diffMin/1440)} d`;
+    document.getElementById('actUltimo').textContent = txt;
+  }
+  updateUltimo();
+  setInterval(updateUltimo, 60000);
+})();'''
+
+          new_script = '''/* ====== CONFIG: EDITA ESTE VALOR A MANO SEGÚN SEA NECESARIO ====== */
+const actConfig = {
+  pedidosEsteMes: 2847 // <-- cambia este número según tus pedidos reales del mes
+};
+/* ================================================================= */
+(function(){
+  document.getElementById('actPedidos').textContent = actConfig.pedidosEsteMes.toLocaleString('es');
+})();'''
+
+          if old_script not in s:
+              raise SystemExit('Activity script target not found')
+          s = s.replace(old_script, new_script, 1)
+
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit change
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Replace stale last-order counter"
+          git push
